@@ -1,0 +1,27 @@
+<header class = 'site-header'>
+  <div class = 'color-band'>
+    <div class = 'band blue'></div>
+    <div class = 'band lime'></div>
+    <div class = 'band red'></div>
+    <div class = 'band plum'></div>
+    <div class = 'band gold'></div>
+    <div class = 'band blue'></div>
+    <div class = 'band lime'></div>
+    <div class = 'band red'></div>
+    <div class = 'band plum'></div>
+    <div class = 'band gold'></div>
+    <div class = 'band blue'></div>
+    <div class = 'band lime'></div>
+    <div class = 'band red'></div>
+    <div class = 'band plum'></div>
+    <div class = 'band gold'></div>
+  </div>
+  <h1 id = 'logo' class = 'logo'>
+    <%= link_to Refinery::Core.site_name, refinery.root_path %>
+  </h1>
+  <h2 class = 'mantra'>handcrafted software<h2>
+  <%= render(:partial => "/refinery/menu", :locals => {
+               :dom_id => 'menu',
+               :css => 'menu'
+             }) %>
+</header>

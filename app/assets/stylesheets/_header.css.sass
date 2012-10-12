@@ -1,0 +1,80 @@
+@import "grid"
+@import "colors"
+@import "backgrounds"
+
+$m : 3% //margin
+$g : 5% //gutter
+
+
+  
+.site-header
+  @include row($m, $g)
+  @extend .rough
+
+.color-band
+  height              : 3px
+  width               : 120%
+  @media (min-width: 650px)
+    width             : 120%
+  overflow            : hidden
+  .band
+    height            : 3px
+    width             : 45px
+    @media (min-width: 650px)
+      width           : 5.7%
+    float             : left
+  .blue
+    background-color  : $blue
+  .lime
+    background-color  : $lime
+  .red
+    background-color  : $red
+  .plum
+    background-color  : $plum
+  .gold
+    background-color  : $gold
+
+.logo
+  @include col(1, 1, $m, $g)
+  text-indent         : -9999px
+  background: 
+    image             : url("logo.png")
+    repeat            : no-repeat
+    position          : center, center
+    size              : 66px, auto
+  margin-bottom       : 0
+
+.mantra
+  @include col(1, 1, $m, $g)
+  margin:
+    top               : 0
+  font:
+    size              : 7px
+    size              : 0.7rem
+  color               : $grey
+  text-align          : center
+
+.menu
+  @include col(1, 1, $m, $g)
+  border:
+    top               : solid lighten($grey, 40%) 1px
+    bottom            : solid lighten($grey, 40%) 1px
+  ul
+    list-style-type   : none
+  li
+    @include col(5, 1, 0, 0)
+    @extend .mantra
+    margin:
+      top             : 0
+      bottom          : 0
+    padding:
+      top             : 0.5em
+      bottom          : 0.1em
+    font:
+      size            : 10px
+      size            : 1.0rem
+    text:
+      transform       : uppercase
+
+.selected
+  border-bottom       : solid $grey 0.3em

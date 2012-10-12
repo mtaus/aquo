@@ -11,3 +11,62 @@
 
 .soft
   background          : $soft
+
+@mixin lingradient($dir: 7, $color1: #fff, $pos1: 0%, $color2: #000, $pos2: 100%)
+  $altpos1      : $pos1 / 100%
+  $altpos2      : $pos2 / 100%
+  $start        : top
+  $altstart     : left top
+  $end          : bottom
+  $altend       : left bottom
+  @if $dir == 1
+    $start      : top
+    $altstart   : left top
+    $end        : bottom
+    $altend     : left bottom
+  @else if $dir == 2
+    $start      : top right
+    $altstart   : right top
+    $end        : bottom left
+    $altend     : left bottom
+  @else if $dir == 3
+    $start      : right
+    $altstart   : right top
+    $end        : left
+    $altend     : left top
+  @else if $dir == 4
+    $start      : bottom right
+    $altstart   : right bottom
+    $end        : top left
+    $altend     : left top
+  @else if $dir == 5
+    $start      : bottom
+    $altstart   : left bottom
+    $end        : top
+    $altend     : left top
+  @else if $dir == 6
+    $start      : bottom left
+    $altstart   : left bottom
+    $end        : top right
+    $altend     : right top
+  @else if $dir == 7
+    $start      : left
+    $altstart   : left top
+    $end        : right
+    $altend     : right top
+  @else if $dir == 8
+    $start      : top left
+    $altstart   : left top
+    $end        : bottom right
+    $altend     : right bottom
+  @else
+    $start      : top
+    $altstart   : left top
+    $end        : bottom
+    $altend     : left bottom
+
+  background-image  : -webkit-gradient(linear, $altstart, $altend, color-stop($altpos1, $color1), color-stop($altpos2, $color2))
+  background-image  : -webkit-linear-gradient($start, $color1 $pos1, $color2 $pos2)
+  background-image  : -moz-linear-gradient($start, $color1 $pos1, $color2 $pos2)
+  background-image  : -o-linear-gradient($start, $color1 $pos1, $color2 $pos2)
+  background-image  : linear-gradient(to $end, $color1 $pos1, $color2 $pos2)

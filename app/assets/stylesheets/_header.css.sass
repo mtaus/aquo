@@ -2,25 +2,33 @@
 @import "colors"
 @import "backgrounds"
 
-$m : 3% //margin
-$g : 5% //gutter
+$m      : 3% //margin for small screens
+$g      : 5% //gutter for small screens
+$ml     : 10% //margin for large screens
+$gl     : 5% //gutter for large screens
+$break  : 930px //min-size screen trigger for layout change
+$barbrk : 657px //min-size screen trigger for color bar expansion
 
 
   
 .site-header
-  @include row($m, $g)
   @extend .rough
+
+.header-grid
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
 
 .color-band
   height              : 3px
   width               : 120%
-  @media (min-width: 650px)
+  @media (min-width: $barbrk)
     width             : 120%
   overflow            : hidden
   .band
     height            : 3px
     width             : 45px
-    @media (min-width: 650px)
+    @media (min-width: $barbrk)
       width           : 5.7%
     float             : left
   .blue
@@ -36,16 +44,26 @@ $g : 5% //gutter
 
 .logo
   @include col(1, 1, $m, $g)
-  text-indent         : -9999px
   background: 
     image             : url("logo.png")
     repeat            : no-repeat
-    position          : center, center
-    size              : 66px, auto
-  margin-bottom       : 0
+    position          : top center
+    size              : 66px auto
+  @media (min-width: $break)
+    @include col(5, 1, $ml, $gl)
+    background:
+      image             : url("logo.png")
+      repeat            : no-repeat
+      position          : top left
+      size              : 110px auto
 
-.mantra
-  @include col(1, 1, $m, $g)
+.logo-name
+  margin:
+    bottom            : 0
+  text-indent         : -9999px
+  line-height         : 1em
+
+.logo-mantra
   margin:
     top               : 0
   font:
@@ -53,6 +71,13 @@ $g : 5% //gutter
     size              : 0.7rem
   color               : $grey
   text-align          : center
+  @media (min-width: $break)
+    margin:
+      top             : 1.2em
+    text-align        : left
+    font:
+      size            : 12px
+      size            : 1.2rem
 
 .menu
   @include col(1, 1, $m, $g)
@@ -63,7 +88,7 @@ $g : 5% //gutter
     list-style-type   : none
   li
     @include col(5, 1, 0, 0)
-    @extend .mantra
+    @extend .logo-mantra
     margin:
       top             : 0
       bottom          : 0
@@ -75,6 +100,16 @@ $g : 5% //gutter
       size            : 1.0rem
     text:
       transform       : uppercase
+  @media (min-width: $break)
+    @include col(5, 4, $ml, $gl)
+    li
+      @include col(12, 2, 0, 0)
+      font:
+        size            : 14px
+        size            : 1.4rem
+      text-align        : center
+      line-height       : 2.0em
+
 
 .selected
   border-bottom       : solid $grey 0.3em

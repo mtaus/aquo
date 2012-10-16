@@ -1,0 +1,33 @@
+@import "grid"
+@import "colors"
+@import "backgrounds"
+@import "typography"
+
+$m      : 3% //margin for small screens
+$g      : 5% //gutter for small screens
+$ml     : 10% //margin for large screens
+$gl     : 5% //gutter for large screens
+$break  : 930px //min-size screen trigger for layout change
+
+#page
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+
+#body_content_title
+  display         : none
+
+.tagline
+  @extend h1
+  @extend .rough
+  @include col(2, 1, $m, $g)
+  color: $blue
+  color: rgba($blue, 0)
+  text-shadow: 0 0 1px rgba(lighten($blue, 10%), 0.5), 0 0 0 rgba(darken($blue, 10%), 0.9)
+  font:
+    size          : 70px
+    size          : 7.0rem
+  line:
+    height        : 0.9em
+  text:
+    transform     : uppercase

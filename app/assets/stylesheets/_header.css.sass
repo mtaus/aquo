@@ -1,6 +1,7 @@
 @import "grid"
 @import "colors"
 @import "backgrounds"
+@import "typography"
 
 $m      : 3% //margin for small screens
 $g      : 5% //gutter for small screens
@@ -20,13 +21,13 @@ $barbrk : 657px //min-size screen trigger for color bar expansion
     @include row($ml, $gl)
 
 .color-band
-  height              : 3px
+  height              : 5px
   width               : 120%
   @media (min-width: $barbrk)
     width             : 120%
   overflow            : hidden
   .band
-    height            : 3px
+    height            : 5px
     width             : 45px
     @media (min-width: $barbrk)
       width           : 5.7%
@@ -105,10 +106,10 @@ $barbrk : 657px //min-size screen trigger for color bar expansion
     li
       @include col(12, 2, 0, 0)
       font:
-        size            : 14px
-        size            : 1.4rem
+        size            : 18px
+        size            : 1.8rem
       text-align        : center
-      line-height       : 2.0em
+      line-height       : 1.7em
 
 
 .selected

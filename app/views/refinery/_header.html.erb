@@ -1,31 +1,27 @@
-<header class = 'site-header'>
-  <div class = 'color-band'>
-    <div class = 'band blue'></div>
-    <div class = 'band lime'></div>
-    <div class = 'band red'></div>
-    <div class = 'band plum'></div>
-    <div class = 'band gold'></div>
-    <div class = 'band blue'></div>
-    <div class = 'band lime'></div>
-    <div class = 'band red'></div>
-    <div class = 'band plum'></div>
-    <div class = 'band gold'></div>
-    <div class = 'band blue'></div>
-    <div class = 'band lime'></div>
-    <div class = 'band red'></div>
-    <div class = 'band plum'></div>
-    <div class = 'band gold'></div>
-  </div>
-  <div class = 'header-grid'>
-    <div class = 'logo'>
-      <h1 id = 'logo' class = 'logo-name'>
-        <%= link_to Refinery::Core.site_name, refinery.root_path %>
-      </h1>
-      <h2 class = 'logo-mantra'>handcrafted software<h2>
-    </div>
-    <%= render(:partial => "/refinery/menu", :locals => {
-                 :dom_id => 'menu',
-                 :css => 'menu'
-               }) %>
-  </div>
-</header>
+<div class = 'color-band'>
+  <div class = 'band blue'></div>
+  <div class = 'band lime'></div>
+  <div class = 'band red'></div>
+  <div class = 'band plum'></div>
+  <div class = 'band gold'></div>
+  <div class = 'band blue'></div>
+  <div class = 'band lime'></div>
+  <div class = 'band red'></div>
+  <div class = 'band plum'></div>
+  <div class = 'band gold'></div>
+  <div class = 'band blue'></div>
+  <div class = 'band lime'></div>
+  <div class = 'band red'></div>
+  <div class = 'band plum'></div>
+  <div class = 'band gold'></div>
+</div>
+<div class = 'logo'>
+  <h1 id = 'logo' class = 'logo-name'>
+    <%= link_to Refinery::Core.site_name, refinery.root_path %>
+  </h1>
+  <h2 class = 'logo-mantra'>handcrafted software<h2>
+</div>
+<%= render(:partial => "/refinery/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>

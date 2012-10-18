@@ -3,31 +3,141 @@
 @import "backgrounds"
 @import "typography"
 
+@mixin rotate($degrees: 0deg)
+  -webkit-transform : rotate($degrees)
+  -moz-transform    : rotate($degrees)
+  -ms-transform     : rotate($degrees)
+  -o-transform      : rotate($degrees)
+  transform         : rotate($degrees)
+
 $m      : 3% //margin for small screens
 $g      : 5% //gutter for small screens
 $ml     : 10% //margin for large screens
 $gl     : 5% //gutter for large screens
-$break  : 930px //min-size screen trigger for layout change
-
-#page
-  @include row($m, $g)
-  @media (min-width: $break)
-    @include row($ml, $gl)
+$break1 : 350px //min-size trigger for 1st layout change
+$break2 : 340px
+$break3 : 425px
+$break4 : 505px
+$break5 : 645px
+$break6 : 860px
+$break7 : 1210px
+$break8 : 1555px
+$break9 : 1915px
+$breakH : 945px //min-size trigger for 2nd layout change to match header
 
 #body_content_title
-  display         : none
+  display           : none
 
-.tagline
-  @extend h1
+#tagline
+  @include row($m, $g)
+  margin:
+    top           : -3px
+  height          : $break1
+  position        : relative
+  background: 
+    image         : url("buildings.png"), url("background_invert.png")
+    repeat        : no-repeat, repeat
+    position      : top center, top left
+    size          : 100% 85%, auto auto
+  @media (min-width: $break1)
+    height        : $break3
+  @media (min-width: $break5)
+    height        : inherit
+    $w            : (100% - (2 * $m) - $g) / 2
+    background:
+      position    : (($m + $g + $w)/(1 - $w / 100%)) 50%, top left
+      size        : $w 100%, auto auto
+  @media (min-width: $breakH)
+    @include row($ml, $gl)
+    $w            : (100% - (2 * $ml) - $gl) / 2
+    background:
+      position    : (($ml + $gl + $w)/(1 - $w / 100%)) 50%, top left
+      size        : $w 100%, auto auto
   @extend .rough
-  @include col(2, 1, $m, $g)
-  color: $blue
-  color: rgba($blue, 0)
-  text-shadow: 0 0 1px rgba(lighten($blue, 10%), 0.5), 0 0 0 rgba(darken($blue, 10%), 0.9)
-  font:
-    size          : 70px
-    size          : 7.0rem
-  line:
-    height        : 0.9em
-  text:
-    transform     : uppercase
+  h1
+    @extend h1
+    @include col(1, 1, $m, $g)
+    position        : absolute
+    bottom          : 0
+    color: $blue
+    color: rgba($blue, 0)
+    text-shadow: 0 0 1px rgba(lighten($blue, 10%), 0.5), 0 0 0 rgba(darken($blue, 10%), 0.9)
+    font:
+      size          : 25px
+      size          : 2.5rem
+    line:
+      height        : 0.9em
+    text:
+      transform     : uppercase
+      align         : center
+    @media (min-width: $break1)
+    @media (min-width: $break2)
+      font:
+        size        : 31px
+        size        : 3.1rem
+    @media (min-width: $break3)
+      font:
+        size        : 37px
+        size        : 3.7rem
+    @media (min-width: $break4)
+      font:
+        size        : 47px
+        size        : 4.7rem
+    @media (min-width: $break5)
+      @include col(2, 1, $m, $g)
+      position      : relative
+      text:
+        align       : left
+      font:
+        size        : 58px
+        size        : 5.8rem
+    @media (min-width: $break6)
+      font:
+        size        : 70px
+        size        : 7.0rem
+    @media (min-width: $break7)
+      font:
+        size        : 90px
+        size        : 9.0rem
+    @media (min-width: $break8)
+      font:
+        size        : 110px
+        size        : 11.0rem
+    @media (min-width: $break9)
+      font:
+        size        : 140px
+        size        : 14.0rem
+    @media (min-width: $breakH)
+      @include col(2, 1, $ml, $gl)
+
+#specialties
+  @extend .hard
+  @include row($m, $g)
+  .specialty
+    @include col(3, 1, $m, $g)
+    border: red dashed 1px
+  h1
+    text:
+      align         : center
+      transform     : uppercase
+    color           : white
+    font:
+      size          : 25px
+      size          : 3.0rem
+      weight        : 300
+  p
+    color           : white
+  .icon
+    margin          : auto auto
+    width           : 100px
+    height          : 100px
+    border-radius   : 60px
+    @include rotate(45deg)
+    border:
+      top           : lighten($grey, 10%) solid 10px
+      left          : lighten($grey, 10%) solid 10px
+      bottom        : lighten($grey, 30%) solid 10px
+      right         : lighten($grey, 30%) solid 10px
+
+
+  

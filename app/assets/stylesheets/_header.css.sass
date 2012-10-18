@@ -7,15 +7,11 @@ $m      : 3% //margin for small screens
 $g      : 5% //gutter for small screens
 $ml     : 10% //margin for large screens
 $gl     : 5% //gutter for large screens
-$break  : 930px //min-size screen trigger for layout change
-$barbrk : 657px //min-size screen trigger for color bar expansion
+$break  : 945px //min-size trigger for layout change
+$barbrk : 657px //min-size trigger for color bar expansion
 
-
-  
-.site-header
+#header
   @extend .rough
-
-.header-grid
   @include row($m, $g)
   @media (min-width: $break)
     @include row($ml, $gl)

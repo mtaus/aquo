@@ -9,6 +9,19 @@
   -ms-transform     : rotate($degrees)
   -o-transform      : rotate($degrees)
   transform         : rotate($degrees)
+@mixin circleborder($color: white, $width: 10px)
+  border:
+    top           : lighten($color, 10%) solid $width
+    left          : lighten($color, 10%) solid $width
+    bottom        : lighten($color, 30%) solid $width
+    right         : lighten($color, 30%) solid $width
+
+%fade
+  -webkit-transition: all ease-in-out 0.15s
+  -mox-transition: all ease-in-out 0.15s
+  -ms-transition: all ease-in-out 0.15s
+  -o-transition: all ease-in-out 0.15s
+  transition: all ease-in-out 0.15s
 
 $m      : 3% //margin for small screens
 $g      : 5% //gutter for small screens
@@ -112,11 +125,39 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
 
 #specialties
   @extend .hard
-  @include row($m, $g)
+  @include row($ml, $gl)
   .specialty
-    @include col(3, 1, $m, $g)
-    border: red dashed 1px
+    @include col(3, 1, $ml, $gl)
+    &:hover
+      .strategy
+        @extend %fade
+        color         : $gold
+        font:
+          weight      : 600
+      .icon-strategy 
+        @extend %fade
+        @include circleborder($gold, 10px)
+      .design
+        @extend %fade
+        color         : $lime
+        font:
+          weight      : 600
+      .icon-design
+        @extend %fade
+        @include circleborder($lime, 10px)
+      .development
+        @extend %fade
+        color         : $red
+        font:
+          weight      : 600
+      .icon-development
+        @extend %fade
+        @include circleborder($red, 10px)
   h1
+    @extend %fade
+    margin:
+      left          : 12%
+      right         : 12%
     text:
       align         : center
       transform     : uppercase
@@ -128,16 +169,23 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
   p
     color           : white
   .icon
+    @extend %fade
     margin          : auto auto
     width           : 100px
     height          : 100px
     border-radius   : 60px
     @include rotate(45deg)
-    border:
-      top           : lighten($grey, 10%) solid 10px
-      left          : lighten($grey, 10%) solid 10px
-      bottom        : lighten($grey, 30%) solid 10px
-      right         : lighten($grey, 30%) solid 10px
-
-
-  
+    @include circleborder($grey, 10px)
+    background:
+      color         : white
+      image         : image-url('sprite-45.png')
+      size          : 500% 500%
+  .icon-strategy
+    background:
+      position      : 180px 240px
+  .icon-design
+    background:
+      position      : 420px 240px
+  .icon-development
+    background:
+      position      : 420px 360px

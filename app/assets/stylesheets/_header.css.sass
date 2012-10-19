@@ -17,6 +17,7 @@ $barbrk : 657px //min-size trigger for color bar expansion
     @include row($ml, $gl)
 
 .color-band
+  margin-left         : -1 * $ml
   height              : 5px
   width               : 120%
   @media (min-width: $barbrk)
@@ -24,9 +25,9 @@ $barbrk : 657px //min-size trigger for color bar expansion
   overflow            : hidden
   .band
     height            : 5px
-    width             : 45px
+    width             : 57px
     @media (min-width: $barbrk)
-      width           : 5.7%
+      width           : 7.4%
     float             : left
   .blue
     background-color  : $blue
@@ -97,6 +98,10 @@ $barbrk : 657px //min-size trigger for color bar expansion
       size            : 1.0rem
     text:
       transform       : uppercase
+  .twitter
+    display           : none
+  .facebook
+    display           : none
   @media (min-width: $break)
     @include col(5, 4, $ml, $gl)
     li
@@ -106,6 +111,13 @@ $barbrk : 657px //min-size trigger for color bar expansion
         size            : 1.8rem
       text-align        : center
       line-height       : 1.7em
+    .twitter
+      @include col(12, 1, 0, 0)
+      display           : inline
+    .facebook
+      @include col(12, 1, 0, 0)
+      display           : inline
+      
 
 
 .selected

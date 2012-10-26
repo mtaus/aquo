@@ -43,6 +43,7 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
 
 #tagline
   @include row($m, $g)
+  @extend %rough
   margin:
     top           : -3px
   height          : $break1
@@ -66,7 +67,6 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
     background:
       position    : (($ml + $gl + $w)/(1 - $w / 100%)) 50%, top left
       size        : $w 100%, auto auto
-  @extend .rough
   h1
     @extend h1
     @include col(1, 1, $m, $g)
@@ -124,9 +124,9 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
       @include col(2, 1, $ml, $gl)
 
 #specialties
-  @extend .hard
   //@include row($ml, $gl)
   @include row($m, $g)
+  @extend %hard
   @media (min-width: $breakH)
     @include row($ml, $gl)
   .specialty

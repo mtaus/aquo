@@ -11,7 +11,7 @@ $break  : 945px //min-size trigger for layout change
 $barbrk : 657px //min-size trigger for color bar expansion
 
 #header
-  @extend .rough
+  @extend %rough
   @include row($m, $g)
   @media (min-width: $break)
     @include row($ml, $gl)

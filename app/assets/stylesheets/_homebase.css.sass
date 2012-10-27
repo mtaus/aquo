@@ -36,90 +36,9 @@ $break8 : 1555px
 $break9 : 1915px
 $breakH : 945px //min-size trigger for 2nd layout change to match header
 
-#body_content_title
-  display           : none
 
-#tagline
-  @include row($m, $g)
-  @extend %rough
-  margin:
-    top           : -3px
-  height          : $break1
-  position        : relative
-  background: 
-    image         : url("buildings.png"), url("background_invert.png")
-    repeat        : no-repeat, repeat
-    position      : top center, top left
-    size          : 100% 85%, auto auto
-  @media (min-width: $break1)
-    height        : $break3
-  @media (min-width: $break5)
-    height        : inherit
-    $w            : (100% - (2 * $m) - $g) / 2
-    background:
-      position    : (($m + $g + $w)/(1 - $w / 100%)) 50%, top left
-      size        : $w 100%, auto auto
-  @media (min-width: $breakH)
-    @include row($ml, $gl)
-    $w            : (100% - (2 * $ml) - $gl) / 2
-    background:
-      position    : (($ml + $gl + $w)/(1 - $w / 100%)) 50%, top left
-      size        : $w 100%, auto auto
-  h1
-    @extend h1
-    @include col(1, 1, $m, $g)
-    position        : absolute
-    bottom          : 0
-    color: $blue
-    color: rgba($blue, 0)
-    text-shadow: 0 0 1px rgba(lighten($blue, 10%), 0.5), 0 0 0 rgba(darken($blue, 10%), 0.9)
-    font:
-      size          : 25px
-      size          : 2.5rem
-    line:
-      height        : 0.9em
-    text:
-      transform     : uppercase
-      align         : center
-    @media (min-width: $break1)
-    @media (min-width: $break2)
-      font:
-        size        : 31px
-        size        : 3.1rem
-    @media (min-width: $break3)
-      font:
-        size        : 37px
-        size        : 3.7rem
-    @media (min-width: $break4)
-      font:
-        size        : 47px
-        size        : 4.7rem
-    @media (min-width: $break5)
-      @include col(2, 1, $m, $g)
-      position      : relative
-      text:
-        align       : left
-      font:
-        size        : 54px
-        size        : 5.4rem
-    @media (min-width: $break6)
-      font:
-        size        : 70px
-        size        : 7.0rem
-    @media (min-width: $break7)
-      font:
-        size        : 90px
-        size        : 9.0rem
-    @media (min-width: $break8)
-      font:
-        size        : 110px
-        size        : 11.0rem
-    @media (min-width: $break9)
-      font:
-        size        : 140px
-        size        : 14.0rem
-    @media (min-width: $breakH)
-      @include col(2, 1, $ml, $gl)
+
+
 
 #specialties
   //@include row($ml, $gl)

@@ -2,6 +2,7 @@
 @import "colors"
 @import "backgrounds"
 @import "typography"
+@import "margins"
 
 @mixin rotate($degrees: 0deg)
   -webkit-transform : rotate($degrees)
@@ -23,10 +24,7 @@
   -o-transition: all ease-in-out 0.15s
   transition: all ease-in-out 0.15s
 
-$m      : 3% //margin for small screens
-$g      : 5% //gutter for small screens
-$ml     : 10% //margin for large screens
-$gl     : 5% //gutter for large screens
+
 $break1 : 320px //min-size trigger for 1st layout change
 $break2 : 340px
 $break3 : 425px

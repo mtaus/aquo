@@ -89,12 +89,17 @@ $barbrk : 657px //min-size trigger for color bar expansion
       bottom          : 0
     padding:
       top             : 0.5em
-      bottom          : 0.1em
+      bottom          : 0.3em
     font:
       size            : 10px
       size            : 1.0rem
     text:
       transform       : uppercase
+    &:hover
+      padding:
+        bottom        : 0em
+      border:
+        bottom        : solid $grey 0.3em
   .twitter
     display           : none
   .facebook
@@ -114,8 +119,3 @@ $barbrk : 657px //min-size trigger for color bar expansion
     .facebook
       @include col(12, 1, 0, 0)
       display           : inline
-      
-
-
-.selected
-  border-bottom       : solid $grey 0.3em

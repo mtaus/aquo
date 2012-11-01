@@ -38,6 +38,11 @@ $w      : (100% - 2 * $m - 2 * $g) / 3  //width of content within div
       transform         : uppercase
     @media (min-width   : $breakI)
       color             : $soft
+      text:
+        align           : center
+      font:
+        size            : 25px
+        size            : 2.5rem
   p
     color               : $soft
     font:
@@ -53,7 +58,7 @@ $w      : (100% - 2 * $m - 2 * $g) / 3  //width of content within div
     &:hover
       h1
         color           : $lime
-        text-shadow     : 0 0 1.0rem rgba($lime, .20), 0.2rem 0.2rem 0.2rem rgba($lime, 0.1), -0.2rem -0.2rem 0.2rem rgba($lime, 0.1)
+        text-shadow     : 0 0 1.0rem rgba($lime, .10), 0.2rem 0.2rem 0.2rem rgba($lime, 0.05), -0.2rem -0.2rem 0.2rem rgba($lime, 0.05)
     @media (min-width   : $breakI)
       width             : 100% - $g * 3
       margin:

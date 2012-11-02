@@ -4,12 +4,9 @@
 @import "typography"
 @import "margins"
 
-$break  : 945px //min-size trigger for layout change
-$barbrk : 657px //min-size trigger for color bar expansion
-
 #bottom_nav
   @include row($m, $g)
-  @media (min-width: $break)
+  @media (min-width: $tablet_thin), (min-width: $tablet_thin) and #{$webkit_retna}, (min-width: $tablet_thin) and #{$retna}
     @include row($ml, $gl)
   .inner
     border:
@@ -17,7 +14,7 @@ $barbrk : 657px //min-size trigger for color bar expansion
 
 #legal
   @include row($m, $g)
-  @media (min-width: $break)
+  @media (min-width: $tablet_thin), (min-width: $tablet_thin) and #{$webkit_retna}, (min-width: $tablet_thin) and #{$retna}
     @include row($ml, $gl)
   p
     @include col(4, 2, 0, 0)
@@ -35,7 +32,7 @@ $barbrk : 657px //min-size trigger for color bar expansion
   padding:
     top               : 1.0em
     bottom            : 1.0em
-  @media (min-width: $break)
+  @media (min-width: $tablet_thin), (min-width: $tablet_thin) and #{$webkit_retna}, (min-width: $tablet_thin) and #{$retna}
     @include col(1, 1, $ml, $gl)
     margin:
       top             : 0
@@ -46,7 +43,7 @@ $barbrk : 657px //min-size trigger for color bar expansion
     
 .logo2
   display             : none
-  @media (min-width: $break)
+  @media (min-width: $tablet_thin), (min-width: $tablet_thin) and #{$webkit_retna}, (min-width: $tablet_thin) and #{$retna}
     display           : block
     @include col(5, 3, 0, 0)
   height              : 3em
@@ -64,7 +61,7 @@ $barbrk : 657px //min-size trigger for color bar expansion
     text:
       transform       : uppercase
       align           : center
-  @media (min-width: $break)
+  @media (min-width: $tablet_thin), (min-width: $tablet_thin) and #{$webkit_retna}, (min-width: $tablet_thin) and #{$retna}
     @include col(5, 2, 0, 0)
     li
       text:

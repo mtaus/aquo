@@ -45,9 +45,11 @@ $barbrk : 657px //min-size trigger for color bar expansion
       bottom          : 1.0em
     
 .logo2
-  @include col(5, 3, 0, 0)
+  display             : none
   @media (min-width: $break)
+    display           : block
     @include col(5, 3, 0, 0)
+  height              : 3em
   background: 
     image             : url("logo.png")
     repeat            : no-repeat
@@ -55,12 +57,16 @@ $barbrk : 657px //min-size trigger for color bar expansion
     size              : 66px auto
 
 .mini_menu
-  @include col(5, 2, 0, 0)
+  @include col(1, 1, 0, 0)
   list-style-type     : none
-  @media (min-width: $break)
-    @include col(5, 2, 0, 0)
   li
     @include col(4, 1, 0, 0)
     text:
       transform       : uppercase
-      align           : right
+      align           : center
+  @media (min-width: $break)
+    @include col(5, 2, 0, 0)
+    li
+      text:
+        align         : right
+  

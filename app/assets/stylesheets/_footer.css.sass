@@ -1,0 +1,66 @@
+@import "grid"
+@import "colors"
+@import "backgrounds"
+@import "typography"
+@import "margins"
+
+$break  : 945px //min-size trigger for layout change
+$barbrk : 657px //min-size trigger for color bar expansion
+
+#bottom_nav
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  .inner
+    border:
+      bottom          : solid $soft 1px
+
+#legal
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  p
+    @include col(4, 2, 0, 0)
+    color             : $grey
+  a
+    @include col(4, 1, 0, 0)
+    text:
+      align           : right
+
+.inner
+  @include col(1, 1, $m, $g)
+  margin:
+    top               : 0
+    bottom            : 0
+  padding:
+    top               : 1.0em
+    bottom            : 1.0em
+  @media (min-width: $break)
+    @include col(1, 1, $ml, $gl)
+    margin:
+      top             : 0
+      bottom          : 0
+    padding:
+      top             : 1.0em
+      bottom          : 1.0em
+    
+.logo2
+  @include col(5, 3, 0, 0)
+  @media (min-width: $break)
+    @include col(5, 3, 0, 0)
+  background: 
+    image             : url("logo.png")
+    repeat            : no-repeat
+    position          : top left
+    size              : 66px auto
+
+.mini_menu
+  @include col(5, 2, 0, 0)
+  list-style-type     : none
+  @media (min-width: $break)
+    @include col(5, 2, 0, 0)
+  li
+    @include col(4, 1, 0, 0)
+    text:
+      transform       : uppercase
+      align           : right

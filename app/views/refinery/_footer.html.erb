@@ -1,5 +1,26 @@
-<p>
-  <%= t('.copyright', :year => Time.now.year,
-                      :site_name => Refinery::Core.site_name) %>.
-  All Rights Reserved.
-</p>
+<nav id = 'bottom_nav'>
+  <div class = 'inner'>
+    <div class = 'logo2'>
+      <h1 class = 'logo-name'>
+        <%= link_to Refinery::Core.site_name, refinery.root_path %>
+      </h1>
+    </div>
+    <ul class = 'mini_menu'>
+      <li><a href='#'>About</a></li>
+      <li><a href='#'>Blog</a></li>
+      <li><a href='#'>Careers</a></li>
+      <li><a href='#'>Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div id = 'legal'>
+  <div class = 'inner'>
+    <p>
+      <%= t('.copyright', :year => Time.now.year,
+                          :site_name => Refinery::Core.site_name) %>.
+      All Rights Reserved.
+    </p>
+    <a href='#'>Privacy Policy</a>
+    <a href='#'>Terms of Service</a>
+  </div>
+</div>

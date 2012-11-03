@@ -1,0 +1,51 @@
+@import "backgrounds"
+@import "colors"
+@import "grid"
+@import "margins"
+
+%gutters
+  &:nth-child(3n+1)
+    padding:
+      right             : $g / 2
+  &:nth-child(3n+2)
+    padding:
+      left              : $g / 2
+      right             : $g / 2
+  &:nth-child(3n+3)
+    padding:
+      left              : $g / 2
+
+%guttersl
+  &:nth-child(3n+1)
+    padding:
+      right             : $gl / 2
+  &:nth-child(3n+2)
+    padding:
+      left              : $gl / 2
+      right             : $gl / 2
+  &:nth-child(3n+3)
+    padding:
+      left              : $gl / 2
+
+#specialties
+  @include row($m, $g)
+  @extend %hard
+  @media (min-width: $iPad_l)
+    @include row($ml, $gl)
+  .inner
+    @include col(1, 1, $m, $g)
+    @media (min-width: $iPad_l)
+      @include col(1, 1, $ml, $gl)
+  h1
+    @include col(3, 1, 0, 0)
+    @extend %gutters
+    @media (min-width: $iPad_l)
+      @include col(3, 1, 0, 0)
+      text:
+        align             : center
+  p
+    @include col(3, 1, 0, 0)
+    @extend %gutters
+    @media (min-width: $iPad_l)
+      @include col(3, 1, 0, 0)
+      

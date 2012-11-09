@@ -1,0 +1,23 @@
+@import "grid"
+@import "margins"
+
+#lede
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  .inner
+    @include col(1, 1, $m, $g)
+    @media (min-width: $break)
+      @include col(1, 1, $ml, $gl)
+  h2
+    color                 : $grey
+    font:
+      weight              : 400
+      size                : 20px
+      size                : 2.0rem
+  h1
+    color                 : $blue
+    font:
+      weight              : 600
+      size                : 40px
+      size                : 4.0rem

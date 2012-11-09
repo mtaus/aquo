@@ -42,3 +42,29 @@
         weight              : 400
         size                : 30px
         size                : 3.0rem
+  p
+    @include col(1, 1, 0, 0)
+    color                   : $grey
+    line:
+      height                : 1.5
+    font:
+      weight                : 300
+      size                  : 15px
+      size                  : 1.5rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 300
+  li
+    @include col(1, 1, 0, 0)
+    color                   : $grey
+    line:
+      height                : 1.5
+    font:
+      weight                : 300
+      size                  : 10px
+      size                  : 1.0rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 300
+        size                : 20px
+        size                : 2.0rem

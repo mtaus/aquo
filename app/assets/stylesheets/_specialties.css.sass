@@ -3,29 +3,24 @@
 @import "grid"
 @import "margins"
 
-%gutters
-  &:nth-child(3n+1)
-    padding:
-      right             : $g / 2
-  &:nth-child(3n+2)
-    padding:
-      left              : $g / 2
-      right             : $g / 2
-  &:nth-child(3n+3)
-    padding:
-      left              : $g / 2
+$bubble           : 8rem
+$bubblel          : 15rem
+$wall             : 1rem
 
-%guttersl
-  &:nth-child(3n+1)
-    padding:
-      right             : $gl / 2
-  &:nth-child(3n+2)
-    padding:
-      left              : $gl / 2
-      right             : $gl / 2
-  &:nth-child(3n+3)
-    padding:
-      left              : $gl / 2
+%round
+  -webkit-box-sizing    : border-box
+  -moz-box-sizing       : border-box
+  box-sizing            : border-box
+  -webkit-border-radius : 50%
+  -mox-border-radius    : 50%
+  border-radius         : 50%
+%rotate45
+  -webkit-transform : rotate(45deg)
+  -moz-transform    : rotate(45deg)
+  -ms-transform     : rotate(45deg)
+  -o-transform      : rotate(45deg)
+  transform         : rotate(45deg)
+
 
 #specialties
   @include row($m, $g)
@@ -37,15 +32,267 @@
     @media (min-width: $iPad_l)
       @include col(1, 1, $ml, $gl)
   h1
-    @include col(3, 1, 0, 0)
-    @extend %gutters
+    @include col(1, 1, 0, 0)
+    padding:
+      left                : $bubble + 2rem
+    font:
+      size                : 15px
+      size                : 1.5rem
+    color                 : $soft
+    &:nth-child(1)
+      color               : $gold
+      &:before
+        content           : ''
+        position          : absolute
+        left              : 0
+        width             : $bubble
+        height            : $bubble
+        @extend %round
+        @extend %rotate45
+        background:
+          color           : $soft
+          image           : image-url('sprite-45.png')
+          size            : 500% 500%
+          position        : 80% 65%
+        border:
+          top             : lighten($gold, 20%) solid $wall
+          left            : lighten($gold, 20%) solid $wall
+          bottom          : lighten($gold, 10%) solid $wall
+          right           : lighten($gold, 10%) solid $wall
+    &:nth-child(3)
+      color               : $lime
+      &:before
+        content           : ''
+        position          : absolute
+        left              : 0
+        width             : $bubble
+        height            : $bubble
+        @extend %round
+        @extend %rotate45
+        background:
+          color           : $soft
+          image           : image-url('sprite-45.png')
+          size            : 500% 500%
+          position        : 20% 65%
+        border:
+          top             : lighten($lime, 20%) solid $wall
+          left            : lighten($lime, 20%) solid $wall
+          bottom          : lighten($lime, 10%) solid $wall
+          right           : lighten($lime, 10%) solid $wall
+    &:nth-child(5)
+      color               : $red
+      &:before
+        content           : ''
+        position          : absolute
+        left              : 0
+        width             : $bubble
+        height            : $bubble
+        @extend %round
+        @extend %rotate45
+        background:
+          color           : $soft
+          image           : image-url('sprite-45.png')
+          size            : 500% 500%
+          position        : 21% 35%
+        border:
+          top             : lighten($red, 20%) solid $wall
+          left            : lighten($red, 20%) solid $wall
+          bottom          : lighten($red, 10%) solid $wall
+          right           : lighten($red, 10%) solid $wall
     @media (min-width: $iPad_l)
       @include col(3, 1, 0, 0)
-      text:
-        align             : center
+      font:
+        size              : 25px
+        size              : 2.5rem
+      &:nth-child(1)
+        padding           : 0
+        color             : $soft
+        margin:
+          top             : $bubblel
+        &:before
+          content         : ''
+          display         : block
+          margin:
+            left          : 0
+          top             : -$bubblel - 1rem
+          width           : $bubblel
+          height          : $bubblel
+          @extend %round
+          @extend %rotate45
+          background:
+            color         : $soft
+            image         : image-url('sprite-45.png')
+            size          : 500% 500%
+            position      : 80% 65%
+          border:
+            top           : lighten($grey, 10%) solid $wall
+            left          : lighten($grey, 10%) solid $wall
+            bottom        : lighten($grey, 20%) solid $wall
+            right         : lighten($grey, 20%) solid $wall
+        &:hover
+          color           : $gold
+          &:before
+            content       : ''
+            display       : block
+            margin:
+              left        : 0
+            top           : -$bubblel - 1rem
+            width         : $bubblel
+            height        : $bubblel
+            @extend %round
+            @extend %rotate45
+            background:
+              color       : $soft
+              image       : image-url('sprite-45.png')
+              size        : 500% 500%
+              position    : 80% 65%
+            border:
+              top         : lighten($gold, 20%) solid $wall
+              left        : lighten($gold, 20%) solid $wall
+              bottom      : lighten($gold, 10%) solid $wall
+              right       : lighten($gold, 10%) solid $wall
+      &:nth-child(3)
+        padding:
+          left            : $gl / 2
+          right           : $gl / 2
+        color             : $soft
+        margin:
+          top             : $bubblel
+        &:before
+          content         : ''
+          display         : block
+          margin:
+            left          : $gl / 2
+          top             : -$bubblel - 1rem
+          width           : $bubblel
+          height          : $bubblel
+          @extend %round
+          @extend %rotate45
+          background:
+            color         : $soft
+            image         : image-url('sprite-45.png')
+            size          : 500% 500%
+            position      : 80% 65%
+          border:
+            top           : lighten($grey, 10%) solid $wall
+            left          : lighten($grey, 10%) solid $wall
+            bottom        : lighten($grey, 20%) solid $wall
+            right         : lighten($grey, 20%) solid $wall
+        &:hover
+          color           : $lime
+          &:before
+            content       : ''
+            display       : block
+            margin:
+              left        : $gl / 2
+            top           : -$bubblel - 1rem
+            width         : $bubblel
+            height        : $bubblel
+            @extend %round
+            @extend %rotate45
+            background:
+              color       : $soft
+              image       : image-url('sprite-45.png')
+              size        : 500% 500%
+              position    : 80% 65%
+            border:
+              top         : lighten($lime, 20%) solid $wall
+              left        : lighten($lime, 20%) solid $wall
+              bottom      : lighten($lime, 10%) solid $wall
+              right       : lighten($lime, 10%) solid $wall
+      &:nth-child(5)
+        padding:
+          left            : $gl / 2
+        color             : $soft
+        margin:
+          top             : $bubblel
+        &:before
+          content         : ''
+          display         : block
+          margin:
+            left          : $gl / 2
+          top             : -$bubblel - 1rem
+          width           : $bubblel
+          height          : $bubblel
+          @extend %round
+          @extend %rotate45
+          background:
+            color         : $soft
+            image         : image-url('sprite-45.png')
+            size          : 500% 500%
+            position      : 80% 65%
+          border:
+            top           : lighten($grey, 10%) solid $wall
+            left          : lighten($grey, 10%) solid $wall
+            bottom        : lighten($grey, 20%) solid $wall
+            right         : lighten($grey, 20%) solid $wall
+        &:hover
+          color           : $red
+          &:before
+            content       : ''
+            display       : block
+            margin:
+              left        : $gl / 2
+            top           : -$bubblel - 1rem
+            width         : $bubblel
+            height        : $bubblel
+            @extend %round
+            @extend %rotate45
+            background:
+              color       : $soft
+              image       : image-url('sprite-45.png')
+              size        : 500% 500%
+              position    : 80% 65%
+            border:
+              top         : lighten($red, 20%) solid $wall
+              left        : lighten($red, 20%) solid $wall
+              bottom      : lighten($red, 10%) solid $wall
+              right       : lighten($red, 10%) solid $wall
   p
-    @include col(3, 1, 0, 0)
-    @extend %gutters
+    @include col(1, 1, 0, 0)
+    color                 : $soft
+    line:
+      height              : 1.8
+    font:
+      size                : 12px
+      size                : 1.2rem
+    &:nth-child(2)
+      padding:
+        left              : $bubble + 2rem
+    &:nth-child(4)
+      padding:
+        left              : $bubble + 2rem
+    &:nth-child(6)
+      padding:
+        left              : $bubble + 2rem
+    &:nth-child(7)
+      display             : none
+    &:nth-child(8)
+      display             : none
+    &:nth-child(9)
+      display             : none
     @media (min-width: $iPad_l)
       @include col(3, 1, 0, 0)
-      
+      font:
+        size              : 15px
+        size              : 1.5rem
+      &:nth-child(2)
+        display           : none
+      &:nth-child(4)
+        display           : none
+      &:nth-child(6)
+        display           : none
+      &:nth-child(7)
+        display           : block
+        padding:
+          right           : $g / 2
+      &:nth-child(8)
+        display           : block
+        padding:
+          left            : $g / 2
+          right           : $g / 2
+      &:nth-child(9)
+        display           : block
+        padding:
+          left            : $g / 2
+        

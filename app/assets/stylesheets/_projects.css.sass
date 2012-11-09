@@ -1,0 +1,113 @@
+#projects
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  .inner
+    margin                : 0
+    padding               : 0
+    width                 : 100%
+
+#project
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  @extend %hard
+  .inner
+    margin                : 0
+    padding               : 0
+    width                 : 100%
+
+#project_browse
+  @include col(2, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(3, 1, $ml, $gl)
+  h1
+    @include col(1, 1, 0, 0)
+    color                   : $blue
+    font:
+      weight                : 400
+      size                  : 20px
+      size                  : 2.0rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 400
+        size                : 30px
+        size                : 3.0rem
+  h2
+    @include col(1, 1, 0, 0)
+    color                   : $grey
+    font:
+      weight                : 400
+      size                  : 15px
+      size                  : 1.5rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 400
+        size                : 25px
+        size                : 2.5rem
+  img
+    width                   : 100%
+    height                  : auto
+
+#project_detail
+  @include col(1, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(1, 1, $ml, $gl)
+  h1
+    @include col(1, 1, 0, 0)
+    color                   : $soft
+    text:
+      align                 : center
+    font:
+      weight                : 400
+      size                  : 25px
+      size                  : 2.0rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 400
+        size                : 35px
+        size                : 3.5rem
+  h2
+    @include col(1, 1, 0, 0)
+    color                   : $red
+    text:
+      align                 : center
+    font:
+      weight                : 300
+      size                  : 20px
+      size                  : 2.0rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 300
+        size                : 30px
+        size                : 3.0rem
+  h3
+    @include col(1, 1, 0, 0)
+    color                   : $soft
+    font:
+      weight                : 400
+      size                  : 15px
+      size                  : 1.5rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 400
+        size                : 25px
+        size                : 2.5rem
+  p
+    @include col(1, 1, 0, 0)
+    color                   : $soft
+    font:
+      weight                : 300
+      size                  : 10px
+      size                  : 1.0rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 300
+        size                : 20px
+        size                : 2.0rem
+  img
+    width                   : 50%
+    height                  : auto
+    margin:
+      left                  : 25%
+

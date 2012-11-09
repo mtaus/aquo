@@ -1,4 +1,49 @@
+$w      : (100% - 2 * $m - $g) / 2
+$wl     : (100% - 2 * $ml - $gl) / 2
+
 #wide_topic
   @include row($m, $g)
   @media (min-width: $break)
     @include row($ml, $gl)
+  @extend %soft
+  h2
+    display           : block 
+    margin:
+      left            : auto
+      right           : auto
+    text:
+      align           : center
+    font:
+      weight          : 400
+      size            : 20px
+      size            : 2.0rem
+    width             : 1.5em
+    height            : 1.5em
+    background:
+      color           : $gold
+    @extend %round
+    @media (min-width: $break)
+      font:
+        size          : 30px
+        size          : 3.0rem
+  h1
+    @include col(1, 1, 0, 0)
+    padding:
+      left            : 1em
+    text:
+      align           : center
+    font:
+      weight          : 400
+      size            : 20px
+      size            : 2.0rem
+    color             : $grey
+    @media (min-width: $break)
+      font:
+        size          : 30px
+        size          : 3.0rem
+  p
+    @include col(1, 1, 0, 0)
+    @media (min-width: $tablet_thin)
+      -webkit-columns : 100px 2
+      -moz-columns    : 100px 2
+      columns         : 100px 2

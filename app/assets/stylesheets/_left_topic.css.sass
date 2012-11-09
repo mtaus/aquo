@@ -23,8 +23,12 @@
       align           : center
     font:
       weight          : 400
-      size            : 30px
-      size            : 3.0rem
+      size            : 20px
+      size            : 2.0rem
+    @media (min-width: $break)
+      font:
+        size          : 30px
+        size          : 3.0rem
     width             : 1.5em
     height            : 1.5em
     background:
@@ -32,15 +36,19 @@
     @extend %round
 
   h1
-    display           : inline
+    display           : block
     float             : left
     padding:
       left            : 1em
     height            : 1.5em
     font:
       weight          : 400
-      size            : 30px
-      size            : 3.0rem
+      size            : 20px
+      size            : 2.0rem
+    @media (min-width: $break)
+      font:
+        size          : 30px
+        size          : 3.0rem
     color             : $grey
   p
     @include col(1, 1, 0, 0)

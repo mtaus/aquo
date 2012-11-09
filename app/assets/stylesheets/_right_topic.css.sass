@@ -1,2 +1,54 @@
 #right_topic
-  
+  margin:
+    left              : $g
+    top               : $g / 2
+    bottom            : $g / 2
+  width               : 100% - 2 * $m
+  @media (min-width: $tablet_thin)
+    float             : left
+    width             : (100% - 2 * $m -$g) / 2
+  @media (min-width: $break)
+    margin:
+      left            : $gl
+      top             : $gl / 2
+      bottom          : $gl / 2
+    width             : (100% - 2 * $ml -$gl) / 2
+  .inner
+    margin            : 0
+    padding           : 0
+  h2
+    display           : block
+    float             : left
+    text:
+      align           : center
+    font:
+      weight          : 400
+      size            : 20px
+      size            : 2.0rem
+    width             : 1.5em
+    height            : 1.5em
+    background:
+      color           : $gold
+    @extend %round
+    @media (min-width: $break)
+      font:
+        size          : 30px
+        size          : 3.0rem
+
+  h1
+    display           : block
+    float             : left
+    padding:
+      left            : 1em
+    height            : 1.5em
+    font:
+      weight          : 400
+      size            : 20px
+      size            : 2.0rem
+    color             : $grey
+    @media (min-width: $break)
+      font:
+        size          : 30px
+        size          : 3.0rem
+  p
+    @include col(1, 1, 0, 0)

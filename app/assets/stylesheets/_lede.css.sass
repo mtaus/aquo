@@ -7,8 +7,15 @@
     @include row($ml, $gl)
   .inner
     @include col(1, 1, $m, $g)
+    margin:
+      top                 : 0
+      bottom              : 0
     @media (min-width: $break)
       @include col(1, 1, $ml, $gl)
+      margin:
+        top               : 0
+        bottom            : 0
+    
   h2
     color                 : $grey
     font:
@@ -19,5 +26,13 @@
     color                 : $blue
     font:
       weight              : 600
-      size                : 40px
-      size                : 4.0rem
+      size                : 20px
+      size                : 2.0rem
+    @media (min-width: $iPhone_l)
+      font:
+        size              : 30px
+        size              : 3.0rem
+    @media (min-width: $tablet_thin)
+      font:
+        size              : 40px
+        size              : 4.0rem

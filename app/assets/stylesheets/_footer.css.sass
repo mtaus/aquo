@@ -8,6 +8,8 @@
   @include row($m, $g)
   @media (min-width: $tablet_thin)
     display           : block
+    @include row($m, $g)
+  @media (min-width: $break)
     @include row($ml, $gl)
   .inner
     border:
@@ -27,7 +29,7 @@
     text:
       align           : center
   @media (min-width: $tablet_thin)
-    @include row($ml, $gl)
+    @include row($m, $g)
     p
       @include col(4, 2, 0, 0)
       color             : $grey
@@ -37,6 +39,8 @@
       @include col(4, 1, 0, 0)
       text:
         align           : right
+  @media (min-width: $break)
+    @include row($ml, $gl)
 
 .inner
   @include col(1, 1, $m, $g)
@@ -53,6 +57,11 @@
     padding:
       top             : 1.0em
       bottom          : 1.0em
+  @media (min-width: $break)
+    @include col(1, 1, $ml, $gl)
+    margin:
+      top             : 0
+      bottom          : 0
     
 .logo2
   background: 

@@ -30,6 +30,8 @@
     margin:
       top                 : 0
       bottom              : 0
+    line:
+      height              : 1
     @media (min-width: $break)
       @include col(1, 1, $ml, $gl)
       margin:
@@ -47,6 +49,15 @@
         size              : 2.5rem
     a
       color               : $blue
+      font:
+        weight            : 600
+        size              : 10px
+        size              : 1.0rem
+      @media (min-width: $tablet_thin)
+        font:
+          weight          : 600
+          size            : 15px
+          size            : 1.5rem
   h3
     @include col(1, 1, $m, $g)
     margin:

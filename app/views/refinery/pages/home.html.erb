@@ -2,8 +2,8 @@
 <section id="featured_projects">
   <h1>Handcrafted by Aquo</h1>
   <% @projects.each do |project| %>
-    <a href="/projects/<%= project.id %>">
-      <section id="project">
+    <a href="/project/<%= project.id %>">
+      <section id="project_browse">
         <%=image_fu project.logo, nil %>
         <h2><%=raw project.name %></h2>
         <h3><%=raw project.overview %></h3>

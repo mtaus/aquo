@@ -1,0 +1,44 @@
+#body_content_left
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  .inner
+    margin                : 0
+    padding               : 0
+    width                 : 100%
+
+#body_content_right
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  .inner
+    @include col(1, 1, $m, $g)
+    @media (min-width: $break)
+      @include col(1, 1, $ml, $gl)
+
+#show_blog_post
+  @include col(1, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(1, 1, $ml, $gl)
+
+#comments
+  @include col(1, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(1, 1, $ml, $gl)
+
+#blog_posts
+  @include col(1, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(1, 1, $ml, $gl)
+  h1
+    @include col(1, 1, 0, 0)
+    color                   : $blue
+    font:
+      weight                : 400
+      size                  : 20px
+      size                  : 2.0rem
+    @media (min-width: $tablet_thin)
+      font:
+        weight              : 400
+        size                : 30px
+        size                : 3.0rem

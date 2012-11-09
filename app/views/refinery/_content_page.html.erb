@@ -2,4 +2,15 @@
       :hide_sections => local_assigns[:hide_sections],
       :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
     }) %>
+<section id="featured_projects">
+  <% @projects.each do |project| %>
+    <a href="/projects/#{project.id}">
+      <section>
+        <%=image_fu project.logo, nil %><br />
+        <%=raw project.name %><br />
+        <%=raw project.overview %>
+      </section>
+    </a>
+  <% end %>
+</section>
 <%= render '/refinery/draft_page_message' unless @page.nil? or @page.live? -%>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121010155211) do
+ActiveRecord::Schema.define(:version => 20121109072112) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
@@ -161,6 +161,7 @@ ActiveRecord::Schema.define(:version => 20121010155211) do
     t.integer  "position"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.boolean  "featured"
   end
 
   create_table "refinery_resources", :force => true do |t|

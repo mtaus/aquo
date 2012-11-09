@@ -51,6 +51,11 @@
     <%= f.text_field :tag  -%>
 
   </div>
+  <div class='field'>
+    <%= f.label :featured -%>
+    <%= f.check_box :featured  -%>
+
+  </div>
   
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,

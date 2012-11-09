@@ -1,12 +1,21 @@
 <%= render '/refinery/content_page' %>
 <section id="featured_projects">
   <% @projects.each do |project| %>
-    <a href="/projects/#{project.id}">
+    <a href="/projects/<%= project.id %>">
       <section>
         <%=image_fu project.logo, nil %><br />
         <%=raw project.name %><br />
         <%=raw project.overview %>
       </section>
     </a>
+  <% end %>
+</section>
+<section id="featured_blog_posts">
+  <% @posts.each do |post| %>
+      <section>
+        <%=raw post.title %><br />
+        <%=raw post.custom_teaser %>
+        <%=link_to 'Read More', refinery.blog_post_path(post)%>
+      </section>
   <% end %>
 </section>

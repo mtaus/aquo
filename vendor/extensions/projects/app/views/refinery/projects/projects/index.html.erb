@@ -1,6 +1,24 @@
 <% content_for :body do %>
   <ul id="projects">
     <% @projects.each do |project| %>
+    <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw project.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Overview</h1>
+    <p>
+      <%=raw project.overview %>
+    </p>
+  </section>
+  <section>
+    <h1>Logo</h1>
+    <p>
+      <%= image_fu project.logo, nil %>
+    </p>
+  </section>
       <li>
         <%= link_to project.name, refinery.projects_project_path(project) %>
       </li>

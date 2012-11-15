@@ -6,9 +6,6 @@
 
 #bottom_nav
   @include row($m, $g)
-  @media (min-width: $tablet_thin)
-    display           : block
-    @include row($m, $g)
   @media (min-width: $break)
     @include row($ml, $gl)
   .inner
@@ -25,16 +22,6 @@
     @include col(1, 1, 0, 0)
     text:
       align           : center
-  @media (min-width: $tablet_thin)
-    @include row($m, $g)
-    p
-      @include col(4, 2, 0, 0)
-      text:
-        align           : left
-    a
-      @include col(4, 1, 0, 0)
-      text:
-        align           : right
   @media (min-width: $break)
     @include row($ml, $gl)
 
@@ -68,7 +55,7 @@
   height              : 30px
   height              : 3.0rem
   @include col(1, 1, 0, 0)
-  @media (min-width: $tablet_thin)
+  @media (min-width: $break)
     @include col(5, 3, 0, 0)
     background:
       position        : top left
@@ -83,6 +70,6 @@
     text:
       transform       : uppercase
       align           : right
-  @media (max-width: $tablet_thin - 1px)
+  @media (max-width: $break - 1px)
     display           : none
   

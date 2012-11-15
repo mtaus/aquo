@@ -9,18 +9,11 @@
     color                 : $grey
   h2
     @include col(1, 1, 0, 0)
+  a
+    h2
+      color               : $blue
   h3
     @include col(1, 1, 0, 0)
-    color                 : $grey
-    font:
-      weight              : 400
-      size                : 15px
-      size                : 1.5rem
-    @media (min-width: $tablet_thin)
-      font:
-        weight            : 400
-        size              : 20px
-        size              : 2.0rem
   #project
     @include col(2, 1, $m, $g)
     @media (min-width: $break)

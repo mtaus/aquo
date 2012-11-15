@@ -6,6 +6,11 @@ $wl     : (100% - 2 * $ml - $gl) / 2
   @media (min-width: $break)
     @include row($ml, $gl)
   @extend %soft
+  h1
+    @include col(1, 1, 0, 0)
+    text:
+      align           : center
+    color             : $grey
   h2
     display           : block 
     margin:
@@ -17,28 +22,15 @@ $wl     : (100% - 2 * $ml - $gl) / 2
       weight          : 400
       size            : 20px
       size            : 2.0rem
-    width             : 1.5em
-    height            : 1.5em
     background:
       color           : $gold
     @extend %round
-    @media (min-width: $break)
+    @media (min-width: $tablet_thin)
       font:
         size          : 30px
         size          : 3.0rem
-  h1
-    @include col(1, 1, 0, 0)
-    text:
-      align           : center
-    font:
-      weight          : 400
-      size            : 20px
-      size            : 2.0rem
-    color             : $grey
-    @media (min-width: $break)
-      font:
-        size          : 30px
-        size          : 3.0rem
+    width             : 1.5em
+    height            : 1.5em
   p
     @include col(1, 1, 0, 0)
     @media (min-width: $tablet_thin)

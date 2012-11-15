@@ -1,10 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600)
-@import "colors"
 
 h1
   font:
     family            : 'Titillium Web', sans-serif
     weight            : 600
+    size              : 20px
+    size              : 2.0rem
+  color               : $blue
+  @media (min-width: $tablet_thin)
+    font:
+      size            : 30px
+      size            : 3.0rem
+
 
 h2
   font:
@@ -16,6 +23,14 @@ h3
     family            : 'Titillium Web', sans-serif
     weight            : 400
 
+p
+  font:
+    family            : 'Titillium Web', sans-serif
+    weight            : 300
+    size              : 14px
+    size              : 1.4rem
+  line:
+    height            : 1.8
 
 a
   text:
@@ -28,9 +43,26 @@ a
     text:
       decoration      : none
 
-p
+li
   font:
     family            : 'Titillium Web', sans-serif
     weight            : 300
-    size              : 14px
-    size              : 1.4rem
+  line:
+    height            : 1.3
+  margin:
+    left              : 1.5em
+
+ul
+  margin:
+    top               : 0.5em
+    bottom            : 0.5em
+
+ol
+  margin:
+    top               : 0.5em
+    bottom            : 0.5em
+
+time
+  font:
+    family            : 'Titillium Web', sans-serif
+    weight            : 300

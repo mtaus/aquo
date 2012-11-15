@@ -38,9 +38,7 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
       position    : (($ml + $gl + $w)/(1 - $w / 100%)) 50%, top left
       size        : $w 100%, auto auto
   h1
-    @extend h1
     @include col(1, 1, $m, $g)
-    color: $blue
     color: rgba($blue, 0)
     text-shadow: 0 0 1px rgba(lighten($blue, 10%), 0.5), 0 0 0 rgba(darken($blue, 10%), 0.9)
     font:

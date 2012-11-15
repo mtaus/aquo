@@ -30,14 +30,6 @@
     @include col(3, 1, 0, 0)
     text:
       align               : center
-    font:
-      weight              : 600
-      size                : 15px
-      size                : 1.5rem
-    @media (min-width: $iPhone_l)
-      font:
-        size              : 20px
-        size              : 2.0rem
     &:nth-child(1)
       background:
         color             : $gold
@@ -161,6 +153,15 @@
     @include col(3, 1, 0, 0)
     text:
       align               : center
+    &:nth-child(1)
+      a
+        color             : $gold
+    &:nth-child(2)
+      a
+        color             : $lime
+    &:nth-child(3)
+      a
+        color             : $red
     font:
       weight              : 600
       size                : 15px
@@ -171,9 +172,8 @@
         size              : 2.0rem
     @media (min-width: $tablet_thin)
       &:nth-child(1)
-        &:hover
-          a
-            color         : $gold
+        a
+          color           : $gold
         text:
           align           : left
         &:before
@@ -206,9 +206,8 @@
           -o-transform      : rotate(45deg)
           transform         : rotate(45deg)
       &:nth-child(2)
-        &:hover
-          a
-            color         : $lime
+        a
+          color           : $lime
         background:
           color           : $hard
         text:
@@ -243,9 +242,8 @@
           -o-transform      : rotate(45deg)
           transform         : rotate(45deg)
       &:nth-child(3)
-        &:hover
-          a
-            color         : $red
+        a
+          color           : $red
         background:
           color           : $hard
         text:

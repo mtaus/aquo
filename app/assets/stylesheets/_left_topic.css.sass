@@ -17,6 +17,13 @@
     margin            : 0
     padding           : 0
     width             : 100%
+  h1
+    display           : block
+    float             : left
+    padding:
+      left            : 1em
+    height            : 1.5em
+    color             : $grey
   h2
     display           : block
     float             : left
@@ -26,30 +33,14 @@
       weight          : 400
       size            : 20px
       size            : 2.0rem
-    @media (min-width: $break)
+    @media (min-width: $tablet_thin)
       font:
         size          : 30px
         size          : 3.0rem
-    width             : 1.5em
-    height            : 1.5em
     background:
       color           : $gold
     @extend %round
-
-  h1
-    display           : block
-    float             : left
-    padding:
-      left            : 1em
+    width             : 1.5em
     height            : 1.5em
-    font:
-      weight          : 400
-      size            : 20px
-      size            : 2.0rem
-    @media (min-width: $break)
-      font:
-        size          : 30px
-        size          : 3.0rem
-    color             : $grey
   p
     @include col(1, 1, 0, 0)

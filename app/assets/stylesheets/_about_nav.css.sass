@@ -1,17 +1,4 @@
-%round
-  -webkit-box-sizing    : border-box
-  -moz-box-sizing       : border-box
-  box-sizing            : border-box
-  -webkit-border-radius : 50%
-  -mox-border-radius    : 50%
-  border-radius         : 50%
-
-%rotate45
-  -webkit-transform : rotate(45deg)
-  -moz-transform    : rotate(45deg)
-  -ms-transform     : rotate(45deg)
-  -o-transform      : rotate(45deg)
-  transform         : rotate(45deg)
+$scaleFactorA       : 0.34
 
 #about_nav
   @include row($m, $g)
@@ -22,12 +9,17 @@
     padding:
       top                 : 0
       bottom              : 0
-    @media (min-width: $tablet_thin)
+    @media (min-width: $tablet_thin + 15px)
       padding:
         top               : 1.0em
 
   h1
     @include col(3, 1, 0, 0)
+    font:
+      weight              : 400
+      size                : 15px
+      size                : 1.5rem
+    height                : 3.0em
     text:
       align               : center
     &:nth-child(1)
@@ -39,22 +31,29 @@
     &:nth-child(3)
       background:
         color             : $red
-    @media (min-width: $tablet_thin)
+    @media (min-width: $tablet_thin + 15px)
+      font:
+        size              : 25px
+        size              : 2.5rem
+      height                : inherit
       &:nth-child(1)
         a
           color           : $gold
         background:
           color           : $hard
         text:
-          align           : left
+          align           : center
+        margin:
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : 0
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
           background:
             color         : $soft
             image         : image-url('sprite-45.png')
@@ -82,20 +81,23 @@
         background:
           color           : $hard
         text:
-          align           : left
+          align           : center
+        margin:
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : 0
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
           background:
             color         : $soft
             image         : image-url('sprite-45.png')
             size          : 500% 500%
-            position      : 80% 65%
+            position      : 20% 65%
           border:
             top           : lighten($lime, 20%) solid $wall
             left          : lighten($lime, 20%) solid $wall
@@ -118,20 +120,23 @@
         background:
           color           : $hard
         text:
-          align           : left
+          align           : center
+        margin:
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : 0
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
           background:
             color         : $soft
             image         : image-url('sprite-45.png')
             size          : 500% 500%
-            position      : 80% 65%
+            position      : 21% 35%
           border:
             top           : lighten($red, 20%) solid $wall
             left          : lighten($red, 20%) solid $wall
@@ -163,26 +168,31 @@
       a
         color             : $red
     font:
-      weight              : 600
-      size                : 20px
-      size                : 2.0rem
-    @media (min-width: $tablet_thin)
+      weight              : 400
+      size                : 15px
+      size                : 1.5rem
+    height                : 3.0em
+    @media (min-width: $tablet_thin + 15px)
       font:
-        size              : 30px
-        size              : 3.0rem
+        size              : 25px
+        size              : 2.5rem
+      height              : inherit
       &:nth-child(1)
         a
           color           : $gold
         text:
-          align           : left
+          align           : center
+        margin:
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : 0
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
           background:
             color         : $soft
             image         : image-url('sprite-45.png')
@@ -210,20 +220,23 @@
         background:
           color           : $hard
         text:
-          align           : left
+          align           : center
+        margin:
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : 0
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
           background:
             color         : $soft
             image         : image-url('sprite-45.png')
             size          : 500% 500%
-            position      : 80% 65%
+            position      : 20% 65%
           border:
             top           : lighten($grey, 10%) solid $wall
             left          : lighten($grey, 10%) solid $wall
@@ -246,20 +259,23 @@
         background:
           color           : $hard
         text:
-          align           : left
+          align           : center
+        margin:
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : 0
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
           background:
             color         : $soft
             image         : image-url('sprite-45.png')
             size          : 500% 500%
-            position      : 80% 65%
+            position      : 21% 35%
           border:
             top           : lighten($grey, 10%) solid $wall
             left          : lighten($grey, 10%) solid $wall

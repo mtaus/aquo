@@ -7,8 +7,6 @@ $bubble           : 8rem
 $bubblel          : 15rem
 $wall             : 1rem
 $scaleFactor      : 0.32
-$topOffset        : -180%
-$headingOffset    : 16%
 
 %round
   -webkit-box-sizing    : border-box
@@ -44,7 +42,7 @@ $headingOffset    : 16%
     font:
       size                : 15px
       size                : 1.5rem
-    &:nth-child(1)
+    &:nth-of-type(1)
       a
         color               : $gold
       &:before
@@ -65,7 +63,7 @@ $headingOffset    : 16%
           left            : lighten($gold, 20%) solid $wall
           bottom          : lighten($gold, 10%) solid $wall
           right           : lighten($gold, 10%) solid $wall
-    &:nth-child(3)
+    &:nth-of-type(2)
       a
         color               : $lime
       &:before
@@ -86,7 +84,7 @@ $headingOffset    : 16%
           left            : lighten($lime, 20%) solid $wall
           bottom          : lighten($lime, 10%) solid $wall
           right           : lighten($lime, 10%) solid $wall
-    &:nth-child(5)
+    &:nth-of-type(3)
       a
         color               : $red
       &:before
@@ -113,7 +111,7 @@ $headingOffset    : 16%
       font:
         size              : 25px
         size              : 2.5rem
-      &:nth-child(1)
+      &:nth-of-type(1)
         text:
           align           : center
         a
@@ -150,7 +148,7 @@ $headingOffset    : 16%
               left        : lighten($gold, 20%) solid $wall
               bottom      : lighten($gold, 10%) solid $wall
               right       : lighten($gold, 10%) solid $wall
-      &:nth-child(3)
+      &:nth-of-type(2)
         text:
           align           : center
         a
@@ -187,7 +185,7 @@ $headingOffset    : 16%
               left        : lighten($lime, 20%) solid $wall
               bottom      : lighten($lime, 10%) solid $wall
               right       : lighten($lime, 10%) solid $wall
-      &:nth-child(5)
+      &:nth-of-type(3)
         text:
           align           : center
         a
@@ -227,39 +225,39 @@ $headingOffset    : 16%
   p
     @include col(1, 1, 0, 0)
     color                 : $soft
-    &:nth-child(2)
+    &:nth-of-type(1)
       padding:
         left              : $bubble + 2rem
-    &:nth-child(4)
+    &:nth-of-type(2)
       padding:
         left              : $bubble + 2rem
-    &:nth-child(6)
+    &:nth-of-type(3)
       padding:
         left              : $bubble + 2rem
-    &:nth-child(7)
+    &:nth-of-type(4)
       display             : none
-    &:nth-child(8)
+    &:nth-of-type(5)
       display             : none
-    &:nth-child(9)
+    &:nth-of-type(6)
       display             : none
     @media (min-width: $iPad_l)
-      &:nth-child(2)
+      &:nth-of-type(1)
         display           : none
-      &:nth-child(4)
+      &:nth-of-type(2)
         display           : none
-      &:nth-child(6)
+      &:nth-of-type(3)
         display           : none
-      &:nth-child(7)
+      &:nth-of-type(4)
         @include col(3, 1, $ml, $gl)
         display           : block
         margin:
           top             : 0
-      &:nth-child(8)
+      &:nth-of-type(5)
         @include col(3, 1, $ml, $gl)
         display           : block
         margin:
           top             : 0
-      &:nth-child(9)
+      &:nth-of-type(6)
         @include col(3, 1, $ml, $gl)
         display           : block
         margin:

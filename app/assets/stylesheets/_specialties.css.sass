@@ -6,6 +6,9 @@
 $bubble           : 8rem
 $bubblel          : 15rem
 $wall             : 1rem
+$scaleFactor      : 0.32
+$topOffset        : -180%
+$headingOffset    : 16%
 
 %round
   -webkit-box-sizing    : border-box
@@ -30,7 +33,10 @@ $wall             : 1rem
   .inner
     @include col(1, 1, $m, $g)
     @media (min-width: $iPad_l)
-      @include col(1, 1, $ml, $gl)
+      width                 : 100%
+      margin                : 0
+      padding               : 0
+
   h1
     @include col(1, 1, 0, 0)
     padding:
@@ -38,9 +44,9 @@ $wall             : 1rem
     font:
       size                : 15px
       size                : 1.5rem
-    color                 : $soft
     &:nth-child(1)
-      color               : $gold
+      a
+        color               : $gold
       &:before
         content           : ''
         position          : absolute
@@ -60,7 +66,8 @@ $wall             : 1rem
           bottom          : lighten($gold, 10%) solid $wall
           right           : lighten($gold, 10%) solid $wall
     &:nth-child(3)
-      color               : $lime
+      a
+        color               : $lime
       &:before
         content           : ''
         position          : absolute
@@ -80,7 +87,8 @@ $wall             : 1rem
           bottom          : lighten($lime, 10%) solid $wall
           right           : lighten($lime, 10%) solid $wall
     &:nth-child(5)
-      color               : $red
+      a
+        color               : $red
       &:before
         content           : ''
         position          : absolute
@@ -100,23 +108,27 @@ $wall             : 1rem
           bottom          : lighten($red, 10%) solid $wall
           right           : lighten($red, 10%) solid $wall
     @media (min-width: $iPad_l)
-      @include col(3, 1, 0, 0)
+      @include col(3, 1, $ml, $gl)
+      padding             : 0
       font:
         size              : 25px
         size              : 2.5rem
       &:nth-child(1)
-        padding           : 0
-        color             : $soft
+        text:
+          align           : center
+        a
+          color           : $soft
         margin:
-          top             : $bubblel
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : 0
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactor
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactor
           @extend %round
           @extend %rotate45
           background:
@@ -130,42 +142,30 @@ $wall             : 1rem
             bottom        : lighten($grey, 20%) solid $wall
             right         : lighten($grey, 20%) solid $wall
         &:hover
-          color           : $gold
+          a
+            color           : $gold
           &:before
-            content       : ''
-            display       : block
-            margin:
-              left        : 0
-            top           : -$bubblel - 1rem
-            width         : $bubblel
-            height        : $bubblel
-            @extend %round
-            @extend %rotate45
-            background:
-              color       : $soft
-              image       : image-url('sprite-45.png')
-              size        : 500% 500%
-              position    : 80% 65%
             border:
               top         : lighten($gold, 20%) solid $wall
               left        : lighten($gold, 20%) solid $wall
               bottom      : lighten($gold, 10%) solid $wall
               right       : lighten($gold, 10%) solid $wall
       &:nth-child(3)
-        padding:
-          left            : $gl / 2
-          right           : $gl / 2
-        color             : $soft
+        text:
+          align           : center
+        a
+          color           : $soft
         margin:
-          top             : $bubblel
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : $gl / 2
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactor
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactor
           @extend %round
           @extend %rotate45
           background:
@@ -179,41 +179,30 @@ $wall             : 1rem
             bottom        : lighten($grey, 20%) solid $wall
             right         : lighten($grey, 20%) solid $wall
         &:hover
-          color           : $lime
+          a
+            color           : $lime
           &:before
-            content       : ''
-            display       : block
-            margin:
-              left        : $gl / 2
-            top           : -$bubblel - 1rem
-            width         : $bubblel
-            height        : $bubblel
-            @extend %round
-            @extend %rotate45
-            background:
-              color       : $soft
-              image       : image-url('sprite-45.png')
-              size        : 500% 500%
-              position    : 20% 65%
             border:
               top         : lighten($lime, 20%) solid $wall
               left        : lighten($lime, 20%) solid $wall
               bottom      : lighten($lime, 10%) solid $wall
               right       : lighten($lime, 10%) solid $wall
       &:nth-child(5)
-        padding:
-          left            : $gl / 2
-        color             : $soft
+        text:
+          align           : center
+        a
+          color           : $soft
         margin:
-          top             : $bubblel
+          top             : 0.5em
+          bottom          : 0
         &:before
           content         : ''
           display         : block
+          position        : static
           margin:
-            left          : $gl / 2
-          top             : -$bubblel - 1rem
-          width           : $bubblel
-          height          : $bubblel
+            left          : 25%
+          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactor
+          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactor
           @extend %round
           @extend %rotate45
           background:
@@ -227,22 +216,9 @@ $wall             : 1rem
             bottom        : lighten($grey, 20%) solid $wall
             right         : lighten($grey, 20%) solid $wall
         &:hover
-          color           : $red
+          a
+            color           : $red
           &:before
-            content       : ''
-            display       : block
-            margin:
-              left        : $gl / 2
-            top           : -$bubblel - 1rem
-            width         : $bubblel
-            height        : $bubblel
-            @extend %round
-            @extend %rotate45
-            background:
-              color       : $soft
-              image       : image-url('sprite-45.png')
-              size        : 500% 500%
-              position    : 21% 35%
             border:
               top         : lighten($red, 20%) solid $wall
               left        : lighten($red, 20%) solid $wall
@@ -267,7 +243,6 @@ $wall             : 1rem
     &:nth-child(9)
       display             : none
     @media (min-width: $iPad_l)
-      @include col(3, 1, 0, 0)
       &:nth-child(2)
         display           : none
       &:nth-child(4)
@@ -275,16 +250,18 @@ $wall             : 1rem
       &:nth-child(6)
         display           : none
       &:nth-child(7)
+        @include col(3, 1, $ml, $gl)
         display           : block
-        padding:
-          right           : $g / 2
+        margin:
+          top             : 0
       &:nth-child(8)
+        @include col(3, 1, $ml, $gl)
         display           : block
-        padding:
-          left            : $g / 2
-          right           : $g / 2
+        margin:
+          top             : 0
       &:nth-child(9)
+        @include col(3, 1, $ml, $gl)
         display           : block
-        padding:
-          left            : $g / 2
+        margin:
+          top             : 0
         

@@ -5,9 +5,9 @@
 @import "margins"
 
 $break1 : 320px //min-size trigger for 1st layout change
-$break2 : 340px
-$break3 : 425px
-$break4 : 505px
+$break2 : 365px
+$break3 : 430px
+$break4 : 545px
 $break5 : 645px
 $break6 : 815px
 $break7 : 1210px
@@ -31,7 +31,7 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
     background:
       position    : (($m + $g + $w)/(1 - $w / 100%)) 50%, top left
       size        : $w 100%, auto auto
-  @media (min-width: $breakH)
+  @media (min-width: $break)
     @include row($ml, $gl)
     $w            : (100% - (2 * $ml) - $gl) / 2
     background:
@@ -64,6 +64,9 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
         size        : 4.7rem
     @media (min-width: $break5)
       @include col(2, 1, $m, $g)
+      width         : 5em
+      margin:
+        left        : 0
       position      : relative
       text:
         align       : left
@@ -86,5 +89,8 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
       font:
         size        : 140px
         size        : 14.0rem
-    @media (min-width: $breakH)
+    @media (min-width: $break)
       @include col(2, 1, $ml, $gl)
+      width         : 5em
+      margin:
+        left        : 0

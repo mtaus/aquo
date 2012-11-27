@@ -31,6 +31,21 @@
     color                 : $grey
     background:
       image               : url('1bar.png')
-      size                : 82% 5px
+      size                : 40% 5px
       position            : 100% 60%
       repeat              : no-repeat
+    @media (min-width: $iPhone_p)
+      background:
+        size              : 60% 5px
+    @media (min-width: $iPhone_l)
+      background:
+        size              : 75% 5px
+    @media (min-width: $tablet_thin)
+      background:
+        size              : 65% 5px
+    @media (min-width: $iPad_p)
+      background:
+        size              : 70% 5px
+    @media (min-width: $iPad_l)
+      background:
+        size              : 75% 5px

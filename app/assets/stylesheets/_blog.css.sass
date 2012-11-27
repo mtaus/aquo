@@ -54,8 +54,17 @@
   @include col(1, 1, 0, 0)
   .author
     @include col(7, 1, 0, 0)
+    @extend %soft
+    text:
+      align               : center
+    time
+      color               : $grey
+    p
+      color               : $blue
   .blog_content
     @include col(7, 6, 0, 0)
+    padding:
+      left                : 5%
 
 #comments
   img
@@ -65,3 +74,16 @@
       size                : 15px
       size                : 1.5rem
       weight              : 400
+
+#tags
+  a
+    font:
+      size                : 15px
+      size                : 1.5rem
+    margin:
+      right               : 1.0em
+
+#rss_feed_subscribe
+  font:
+    size                  : 15px
+    size                  : 1.5rem

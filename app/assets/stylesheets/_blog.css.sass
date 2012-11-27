@@ -1,20 +1,44 @@
 #body_content_left
-  @include row($m, $g)
+  box-sizing              : border-box
+  -webkit-box-sizing      : border-box
+  -moz-box-sizing         : border-box
+  margin:
+    left                  : $g
+    right                 : $g
+  @media (min-width: $iPhone_l)
+    float                 : left
+    width                 : 7 * (100% - 3 * $g) / 10
+    margin:
+      left                : $g
+      right               : 0
   @media (min-width: $break)
-    @include row($ml, $gl)
+    width                 : 7 * (100% - 2 * $ml - $gl) / 10
+    margin:
+      left                : $ml
   .inner
-    margin                : 0
-    padding               : 0
-    width                 : 100%
-
+    @include row(0, 0)
+    margin:
+      left                : 0
 #body_content_right
-  @include row($m, $g)
+  box-sizing              : border-box
+  -webkit-box-sizing      : border-box
+  -moz-box-sizing         : border-box
+  margin:
+    left                  : $g
+    right                 : 0
+  @media (min-width: $iPhone_l)
+    float                 : left
+    width                 : 3 * (100% - 3 * $g) / 10
+    margin:
+      left                : $g
   @media (min-width: $break)
-    @include row($ml, $gl)
+    width                 : 3 * (100% - 3 * $ml) / 10
+    margin:
+      left                : $gl
   .inner
-    @include col(1, 1, $m, $g)
-    @media (min-width: $break)
-      @include col(1, 1, $ml, $gl)
+    @include row(0, 0)
+    margin:
+      left                : 0
 
 #show_blog_post
   @include col(1, 1, $m, $g)
@@ -27,9 +51,7 @@
     @include col(1, 1, $ml, $gl)
 
 #blog_posts
-  @include col(1, 1, $m, $g)
-  @media (min-width: $break)
-    @include col(1, 1, $ml, $gl)
+  @include col(1, 1, 0, 0)
   h1
     @include col(1, 1, 0, 0)
   p

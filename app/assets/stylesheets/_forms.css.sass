@@ -1,0 +1,52 @@
+form
+  .field
+    @include row(0, 0)
+    padding:
+      right                 : 0.7rem
+      top                   : 0.7rem
+      bottom                : 0.7rem
+    label
+      @include col(4, 1, 0, 0)
+      font:
+        family              : 'Titillium Web', sans-serif
+        size                : 15px
+        size                : 1.5rem
+        weight              : 400
+      color                 : $grey
+    input
+      @include col(4, 3, 0, 0)
+      &[type="submit"]
+        @include col(4, 1, 0, 0)
+        float               : right
+      &:focus
+        -webkit-box-shadow  : 0 0 0.5rem $blue
+        -moz-box-shadow     : 0 0 0.5rem $blue
+        box-shadow          : 0 0 0.5rem $blue
+      font:
+        family              : 'Titillium Web', sans-serif
+        size                : 15px
+        size                : 1.5rem
+        weight              : 300
+      color                 : $grey
+    textarea
+      @include col(4, 3, 0, 0)
+      font:
+        family              : 'Titillium Web', sans-serif
+        size                : 15px
+        size                : 1.5rem
+        weight              : 300
+      color                 : $grey
+      padding               : 0.2em
+      &:focus
+        -webkit-box-shadow  : 0 0 0.5rem $blue
+        -moz-box-shadow     : 0 0 0.5rem $blue
+        box-shadow          : 0 0 0.5rem $blue
+  .actions
+    @include col(4, 1, 0, 0)
+    float                   : right
+    input
+      @include col(1, 1, 0, 0)
+    #privacy_link
+      @include col(1, 1, 0, 0)
+      text:
+        align               : center

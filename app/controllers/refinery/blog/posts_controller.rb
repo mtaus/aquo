@@ -11,6 +11,7 @@ module Refinery
       respond_to :html, :js, :rss
 
       def index
+        @posts = Refinery::Blog::Post.paginate(:page => params[:page], :per_page => 1)
         # Rss feeders are greedy. Let's give them every blog post instead of paginating.
         (@posts = Post.live.includes(:comments, :categories).all) if request.format.rss?
         respond_with (@posts) do |format|

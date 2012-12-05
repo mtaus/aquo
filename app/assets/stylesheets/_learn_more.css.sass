@@ -1,0 +1,49 @@
+#learn_more
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  @extend %soft
+
+#featured_blog_posts
+  @include col(1, 1, $m, $g)
+  @media (min-width: $iPad_l)
+    @include col(2, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(2, 1, $ml, $gl)
+  h1
+    text:
+      transform           : uppercase
+  h2
+    a
+      color               : $blue
+      font:
+        weight            : 600
+        size              : 10px
+        size              : 1.0rem
+      @media (min-width: $tablet_thin)
+        font:
+          weight          : 600
+          size            : 15px
+          size            : 1.5rem
+
+#know_aquo
+  @include col(1, 1, $m, $g)
+  @media (min-width: $iPad_l)
+    @include col(2, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(2, 1, $ml, $gl)
+  h1
+    text:
+      transform           : uppercase
+  a
+    @extend %button
+    display               : block
+    text:
+      align               : center
+    font:
+      size                : 15px
+      size                : 1.5rem
+    width                 : 10em
+    margin:
+      top                 : 1em
+    height                : 1.8em

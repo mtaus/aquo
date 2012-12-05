@@ -11,13 +11,20 @@
     </a>
   <% end %>
 </section>
-<section id="featured_blog_posts">
-  <h1>Featured blog posts</h1>
-  <% @posts.each do |post| %>
-      <section id="post">
-        <h2><%=raw post.title %></h2>
-        <%=raw post.custom_teaser %>
-        <h2><%=link_to 'read more', refinery.blog_post_path(post)%><h2>
-      </section>
-  <% end %>
-</section>
+<div id="learn_more">
+  <section id="featured_blog_posts">
+    <h1>Featured blog posts</h1>
+    <% @posts.each do |post| %>
+        <section id="post">
+          <h2><%=raw post.title %></h2>
+          <%=raw post.custom_teaser %>
+          <h2><%=link_to 'read more', refinery.blog_post_path(post)%><h2>
+        </section>
+    <% end %>
+  </section>
+  <section id="know_aquo">
+    <h1>Get to Know Aquo</h1>
+    <p>A paragraph about Aquo should be here. It would be cool if we could set up a section of the admin to let you edit this, but its lower priority since this content shouldn't change too often.</p>
+    <a href='/contact'>get in touch with us</a>
+  </section>
+</div>

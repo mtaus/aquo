@@ -19,24 +19,24 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
   @include row($m, $g)
   height          : 250px
   background: 
-    image         : url("buildings.png"), url("background_invert.png")
-    repeat        : no-repeat, repeat
-    position      : bottom center, top left
-    size          : 100% 68%, auto auto
+    image         : url("buildings.png"), url('1bar.png'), url('1bar.png'), url("background_invert.png")
+    repeat        : no-repeat, no-repeat, no-repeat, repeat
+    position      : bottom center, 5% 35%, 97% 35%, top left
+    size          : 100% 68%, 10% 5px, 10% 5px, auto auto
   @media (min-width: $break1)
     height        : 380px
   @media (min-width: $break5)
     height        : inherit
     $w            : (100% - (2 * $m) - $g) / 2
     background:
-      position    : (($m + $g + $w)/(1 - $w / 100%)) 50%, top left
-      size        : $w 100%, auto auto
+      position    : (($m + $g + $w)/(1 - $w / 100%)) 50%, 11% 5%, 97% 5%, top left
+      size        : $w 100%, 55% 5px, 5% 5px, auto auto
   @media (min-width: $break)
     @include row($ml, $gl)
     $w            : (100% - (2 * $ml) - $gl) / 2
     background:
-      position    : (($ml + $gl + $w)/(1 - $w / 100%)) 50%, top left
-      size        : $w 100%, auto auto
+      position    : (($ml + $gl + $w)/(1 - $w / 100%)) 50%, 18% 5%, 89% 5%, top left
+      size        : $w 100%, 45% 5px, 3% 5px, auto auto
   h1
     @include col(1, 1, $m, $g)
     color: rgba($blue, 0)
@@ -53,7 +53,7 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
       bottom        : 20px
     background:
       image         : url('3bar.png')
-      size          : 100% 17px
+      size          : 100% 0px
       position      : center bottom
       repeat        : no-repeat
     @media (min-width: $break1)
@@ -80,6 +80,8 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
       font:
         size        : 54px
         size        : 5.4rem
+      background:
+        size        : 100% 17px
     @media (min-width: $break6)
       font:
         size        : 70px

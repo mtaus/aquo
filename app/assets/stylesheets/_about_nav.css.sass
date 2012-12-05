@@ -1,296 +1,133 @@
-$scaleFactorA       : 0.34
-
 #about_nav
   @include row($m, $g)
+  @extend %hard
   @media (min-width: $break)
     @include row($ml, $gl)
-  @extend %hard
   .inner
-    padding:
-      top                 : 0
-      bottom              : 0
-    @media (min-width: $tablet_thin + 15px)
-      padding:
-        top               : 1.0em
-
-  h1
-    @include col(3, 1, 0, 0)
-    font:
-      weight              : 400
-      size                : 15px
-      size                : 1.5rem
-    height                : 3.0em
-    text:
-      align               : center
-    &:nth-child(1)
-      background:
-        color             : $gold
-    &:nth-child(2)
-      background:
-        color             : $lime
-    &:nth-child(3)
-      background:
-        color             : $red
-    @media (min-width: $tablet_thin + 15px)
+    width                   : 100%
+    margin                  : 0
+    padding                 : 0
+  .offering
+    @include col(3, 1, $m, $g)
+    margin:
+      top                   : 0
+      bottom                : 0
+    @media (min-width: $break)
+      @include col(3, 1, $ml, $gl)
+      margin:
+        top                 : 0
+        bottom              : 0
+    h1, h2
       font:
-        size              : 25px
-        size              : 2.5rem
-      height                : inherit
-      &:nth-child(1)
-        a
-          color           : $gold
-        background:
-          color           : $hard
-        text:
-          align           : center
-        margin:
-          top             : 0.5em
-          bottom          : 0
-        &:before
-          content         : ''
-          display         : block
-          position        : static
-          margin:
-            left          : 25%
-          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          background:
-            color         : $soft
-            image         : image-url('sprite-45.png')
-            size          : 500% 500%
-            position      : 80% 65%
-          border:
-            top           : lighten($gold, 20%) solid $wall
-            left          : lighten($gold, 20%) solid $wall
-            bottom        : lighten($gold, 10%) solid $wall
-            right         : lighten($gold, 10%) solid $wall
-          -webkit-box-sizing    : border-box
-          -moz-box-sizing       : border-box
-          box-sizing            : border-box
-          -webkit-border-radius : 50%
-          -mox-border-radius    : 50%
-          border-radius         : 50%
-          -webkit-transform : rotate(45deg)
-          -moz-transform    : rotate(45deg)
-          -ms-transform     : rotate(45deg)
-          -o-transform      : rotate(45deg)
-          transform         : rotate(45deg)
-      &:nth-child(2)
-        a
-          color           : $lime
-        background:
-          color           : $hard
-        text:
-          align           : center
-        margin:
-          top             : 0.5em
-          bottom          : 0
-        &:before
-          content         : ''
-          display         : block
-          position        : static
-          margin:
-            left          : 25%
-          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          background:
-            color         : $soft
-            image         : image-url('sprite-45.png')
-            size          : 500% 500%
-            position      : 20% 65%
-          border:
-            top           : lighten($lime, 20%) solid $wall
-            left          : lighten($lime, 20%) solid $wall
-            bottom        : lighten($lime, 10%) solid $wall
-            right         : lighten($lime, 10%) solid $wall
-          -webkit-box-sizing    : border-box
-          -moz-box-sizing       : border-box
-          box-sizing            : border-box
-          -webkit-border-radius : 50%
-          -mox-border-radius    : 50%
-          border-radius         : 50%
-          -webkit-transform : rotate(45deg)
-          -moz-transform    : rotate(45deg)
-          -ms-transform     : rotate(45deg)
-          -o-transform      : rotate(45deg)
-          transform         : rotate(45deg)
-      &:nth-child(3)
-        a
-          color           : $red
-        background:
-          color           : $hard
-        text:
-          align           : center
-        margin:
-          top             : 0.5em
-          bottom          : 0
-        &:before
-          content         : ''
-          display         : block
-          position        : static
-          margin:
-            left          : 25%
-          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          background:
-            color         : $soft
-            image         : image-url('sprite-45.png')
-            size          : 500% 500%
-            position      : 21% 35%
-          border:
-            top           : lighten($red, 20%) solid $wall
-            left          : lighten($red, 20%) solid $wall
-            bottom        : lighten($red, 10%) solid $wall
-            right         : lighten($red, 10%) solid $wall
-          -webkit-box-sizing    : border-box
-          -moz-box-sizing       : border-box
-          box-sizing            : border-box
-          -webkit-border-radius : 50%
-          -mox-border-radius    : 50%
-          border-radius         : 50%
-          -webkit-transform : rotate(45deg)
-          -moz-transform    : rotate(45deg)
-          -ms-transform     : rotate(45deg)
-          -o-transform      : rotate(45deg)
-          transform         : rotate(45deg)
-
-  h2
-    @include col(3, 1, 0, 0)
-    text:
-      align               : center
-    &:nth-child(1)
+        weight              : 400
+        size                : 12px
+        size                : 1.2rem
+      text:
+        align               : center
+      margin                : auto auto
+      img
+        display             : none
+        height              : 0
       a
-        color             : $gold
-    &:nth-child(2)
-      a
-        color             : $lime
-    &:nth-child(3)
-      a
-        color             : $red
-    font:
-      weight              : 400
-      size                : 15px
-      size                : 1.5rem
-    height                : 3.0em
-    @media (min-width: $tablet_thin + 15px)
-      font:
-        size              : 25px
-        size              : 2.5rem
-      height              : inherit
-      &:nth-child(1)
-        a
-          color           : $gold
-        text:
-          align           : center
-        margin:
-          top             : 0.5em
-          bottom          : 0
-        &:before
-          content         : ''
-          display         : block
-          position        : static
-          margin:
-            left          : 25%
-          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
+        color               : $soft
+    @media (min-width: $iPhone_l)
+      h1, h2
+        font:
+          size              : 18px
+          size              : 1.8rem
+    @media (min-width: $tablet_thin)
+      h1, h2
+        font:
+          size              : 24px
+          size              : 2.4rem
+        img
+          display           : block
+          margin            : auto auto
+          width             : 100px
+          height            : 100px
           background:
-            color         : $soft
-            image         : image-url('sprite-45.png')
-            size          : 500% 500%
-            position      : 80% 65%
-          border:
-            top           : lighten($grey, 10%) solid $wall
-            left          : lighten($grey, 10%) solid $wall
-            bottom        : lighten($grey, 20%) solid $wall
-            right         : lighten($grey, 20%) solid $wall
-          -webkit-box-sizing    : border-box
-          -moz-box-sizing       : border-box
-          box-sizing            : border-box
-          -webkit-border-radius : 50%
-          -mox-border-radius    : 50%
-          border-radius         : 50%
-          -webkit-transform : rotate(45deg)
-          -moz-transform    : rotate(45deg)
-          -ms-transform     : rotate(45deg)
-          -o-transform      : rotate(45deg)
-          transform         : rotate(45deg)
-      &:nth-child(2)
+            image           : url("bubble_sprite.png")
+            size            : auto 200%
+            position        : bottom center
+            repeat          : no-repeat
+  .strategy
+    h1, h2
+      width                 : 7.0em
+    &:hover
+      h2
         a
-          color           : $lime
+          color             : $gold
+      @media (min-width: $tablet_thin)
+        img
+          background:
+            position        : top left
+    @media (min-width: $tablet_thin)
+      img
         background:
-          color           : $hard
-        text:
-          align           : center
-        margin:
-          top             : 0.5em
-          bottom          : 0
-        &:before
-          content         : ''
-          display         : block
-          position        : static
-          margin:
-            left          : 25%
-          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          background:
-            color         : $soft
-            image         : image-url('sprite-45.png')
-            size          : 500% 500%
-            position      : 20% 65%
-          border:
-            top           : lighten($grey, 10%) solid $wall
-            left          : lighten($grey, 10%) solid $wall
-            bottom        : lighten($grey, 20%) solid $wall
-            right         : lighten($grey, 20%) solid $wall
-          -webkit-box-sizing    : border-box
-          -moz-box-sizing       : border-box
-          box-sizing            : border-box
-          -webkit-border-radius : 50%
-          -mox-border-radius    : 50%
-          border-radius         : 50%
-          -webkit-transform : rotate(45deg)
-          -moz-transform    : rotate(45deg)
-          -ms-transform     : rotate(45deg)
-          -o-transform      : rotate(45deg)
-          transform         : rotate(45deg)
-      &:nth-child(3)
-        a
-          color           : $red
+          position          : bottom left
+    &.active
+      background:
+        color               : $gold
+      @media (min-width: $tablet_thin)
+        h1
+          a
+            color           : $gold
         background:
-          color           : $hard
-        text:
-          align           : center
-        margin:
-          top             : 0.5em
-          bottom          : 0
-        &:before
-          content         : ''
-          display         : block
-          position        : static
-          margin:
-            left          : 25%
-          width           : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
-          padding         : (100% - 2 * $ml - 2 * $gl) * $scaleFactorA
+          color             : $hard
+        img
           background:
-            color         : $soft
-            image         : image-url('sprite-45.png')
-            size          : 500% 500%
-            position      : 21% 35%
-          border:
-            top           : lighten($grey, 10%) solid $wall
-            left          : lighten($grey, 10%) solid $wall
-            bottom        : lighten($grey, 20%) solid $wall
-            right         : lighten($grey, 20%) solid $wall
-          -webkit-box-sizing    : border-box
-          -moz-box-sizing       : border-box
-          box-sizing            : border-box
-          -webkit-border-radius : 50%
-          -mox-border-radius    : 50%
-          border-radius         : 50%
-          -webkit-transform : rotate(45deg)
-          -moz-transform    : rotate(45deg)
-          -ms-transform     : rotate(45deg)
-          -o-transform      : rotate(45deg)
-          transform         : rotate(45deg)
-  a
-    color               : white
+            position        : top left
+  .design
+    h1, h2
+      width                 : 5.0em
+    &:hover
+      h2
+        a
+          color             : $lime
+      @media (min-width: $tablet_thin)
+        img
+          background:
+            position        : top center
+    @media (min-width: $tablet_thin)
+      img
+        background:
+          position          : bottom center
+    &.active
+      background:
+        color               : $lime
+      @media (min-width: $tablet_thin)
+        h1
+          a
+            color           : $lime
+        background:
+          color             : $hard
+        img
+          background:
+            position        : top center
+  .development
+    h1, h2
+      width                 : 7.0em
+    &:hover
+      h2
+        a
+          color             : $red
+      @media (min-width: $tablet_thin)
+        img
+          background:
+            position        : top right
+    @media (min-width: $tablet_thin)
+      img
+        background:
+          position          : bottom right
+    &.active
+      background:
+        color               : $red
+      @media (min-width: $tablet_thin)
+        h1
+          a
+            color           : $red
+        background:
+          color             : $hard
+        img
+          background:
+            position        : top right

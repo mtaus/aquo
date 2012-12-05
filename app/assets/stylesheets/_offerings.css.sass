@@ -1,0 +1,118 @@
+#offerings
+  @include row($m, $g)
+  @extend %hard
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  .inner
+    width             : 100%
+    margin            : 0
+    padding           : 0
+  .offering
+    @include col(1, 1, $m, $g)
+    img
+      height          : 100px
+      width           : 100px
+      background:
+        image         : url("bubble_sprite.png")
+        size          : auto 200%
+        repeat        : no-repeat
+    h1
+      font:
+        weight        : 400
+        size          : 14px
+        size          : 1.4rem
+    h3
+      display         : none
+      text:
+        align         : center
+    p
+      color           : $soft
+      padding:
+        left          : 105px
+        display       : block
+      &:nth-of-type(2)
+        display       : none
+    @media (min-width: $tablet_thin)
+      h1
+        font:
+          size        : 20px
+          size        : 2.0rem
+    @media (min-width: $break)
+      @include col(3, 1, $ml, $gl)
+      img
+        height        : 200px
+        width         : 200px
+      h1
+        font:
+          size        : 20px
+          size        : 2.0rem
+        text:
+          align       : center
+        margin        : auto auto
+        img
+          display     : none
+      h3
+        display       : block
+      p
+        padding       : 0
+        &:nth-of-type(1)
+          display     : none
+        &:nth-of-type(2)
+          display     : block
+  .strategy
+    img
+      background:
+        position      : top left
+    h1
+      color           : $gold
+    @media (min-width: $break)
+      img
+        background:
+          position    : bottom left
+      h1
+        color         : $soft
+        width         : 7em
+      &:hover
+        img
+          background:
+            position  : top left
+        h1
+          color       : $gold
+  .design
+    img
+      background:
+        position      : top center
+    h1
+      color           : $lime
+    @media (min-width: $break)
+      img
+        background:
+          position    : bottom center
+      h1
+        color         : $soft
+        width         : 5em
+      &:hover
+        img
+          background:
+            position  : top center
+        h1
+          color       : $lime
+  .development
+    img
+      background:
+        position      : top right
+    h1
+      color           : $red
+    @media (min-width: $break)
+      img
+        background:
+          position    : bottom right
+      h1
+        color         : $soft
+        width         : 7em
+      &:hover
+        img
+          background:
+            position  : top right
+        h1
+          color       : $red

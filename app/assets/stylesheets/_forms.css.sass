@@ -1,52 +1,93 @@
-form
-  .field
-    @include row(0, 0)
+#body_content
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+
+.inquiries
+  @include row($m, $g)
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  .info
+    @include col(1, 1, $m, $g)
+    margin:
+      top                   : 0
+      bottom                : 0
+    @media (min-width: $tablet_thin)
+      @include col(2, 1, $m, $g)
+      margin:
+        top                 : 0
+        bottom              : 0
+    @media (min-width: $break)
+      @include col(2, 1, $ml, $gl)
+      margin:
+        top                 : 0
+        bottom              : 0
+  .message_field
+    @include col(1, 1, $m, $g)
+    margin:
+      top                   : 0.333333em
+      bottom                : 0.333333em
+    @media (min-width: $tablet_thin)
+      @include col(2, 1, $m, $g)
+      margin:
+        top                 : 0.333333em
+        bottom              : 0.333333em
+    @media (min-width: $break)
+      @include col(2, 1, $ml, $gl)
+      margin:
+        top                 : 0.333333em
+        bottom              : 0.333333em
+  input
+    background:
+      color                 : $soft
+    border                  : $grey 1px solid
+    width                   : 100%
+    margin:
+      top                   : 0.333333em
+      bottom                : 0.333333em
+    &:focus
+      -webkit-box-shadow    : 0 0 0.5rem $blue
+      -moz-box-shadow       : 0 0 0.5rem $blue
+      box-shadow            : 0 0 0.5rem $blue
+    font:
+      family                : 'Titillium Web', sans-serif
+      size                  : 13px
+      size                  : 1.3rem
+      weight                : 300
+    color                   : $grey
+  textarea
+    background:
+      color                 : $soft
+    border                  : $grey 1px solid
+    width                   : 100%
+    font:
+      family                : 'Titillium Web', sans-serif
+      size                  : 13px
+      size                  : 1.3rem
+      weight                : 300
+    color                   : $grey
     padding:
-      right                 : 0.7rem
-      top                   : 0.7rem
-      bottom                : 0.7rem
-    label
-      @include col(4, 1, 0, 0)
-      font:
-        family              : 'Titillium Web', sans-serif
-        size                : 13px
-        size                : 1.3rem
-        weight              : 400
-      color                 : $grey
-    input
-      @include col(4, 3, 0, 0)
-      &[type="submit"]
-        @include col(4, 1, 0, 0)
-        float               : right
-      &:focus
-        -webkit-box-shadow  : 0 0 0.5rem $blue
-        -moz-box-shadow     : 0 0 0.5rem $blue
-        box-shadow          : 0 0 0.5rem $blue
-      font:
-        family              : 'Titillium Web', sans-serif
-        size                : 13px
-        size                : 1.3rem
-        weight              : 300
-      color                 : $grey
-    textarea
-      @include col(4, 3, 0, 0)
-      font:
-        family              : 'Titillium Web', sans-serif
-        size                : 13px
-        size                : 1.3rem
-        weight              : 300
-      color                 : $grey
-      padding               : 0.2em
-      &:focus
-        -webkit-box-shadow  : 0 0 0.5rem $blue
-        -moz-box-shadow     : 0 0 0.5rem $blue
-        box-shadow          : 0 0 0.5rem $blue
+      top                   : 0.2em
+      bottom                : 0.2em
+    margin:
+      top                   : 0.1em
+      bottom                : 0.333333em
+    &:focus
+      -webkit-box-shadow    : 0 0 0.5rem $blue
+      -moz-box-shadow       : 0 0 0.5rem $blue
+      box-shadow            : 0 0 0.5rem $blue
   .actions
-    @include col(4, 1, 0, 0)
-    float                   : right
+    @include col(1, 1, $m, $g)
+    @media (min-width: $break)
+      @include col(1, 1, $ml, $gl)
     input
-      @include col(1, 1, 0, 0)
+      @extend %button
+      display               : block
+      width                 : 10em
+      margin                : auto auto
     #privacy_link
-      @include col(1, 1, 0, 0)
+      display               : block
+      width                 : 10em
       text:
         align               : center
+      margin                : auto auto

@@ -3,6 +3,10 @@
 
 en:
   hello: "Hello world"
-  company: "Company"
   created_at: ""
   inquire: "Inquire"
+  name: "Your Name"
+  email: "E-mail Address"
+  company: "Your Company"
+  phone:  "Your Phone/Mobile"
+  message: "Your Comment"

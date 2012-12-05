@@ -16,7 +16,7 @@
     <h1>Featured blog posts</h1>
     <% @posts.each do |post| %>
         <section id="post">
-          <h2><%=raw post.title %></h2>
+          <h2><%=link_to post.title, refinery.blog_post_path(post)%></h2>
           <%=raw post.custom_teaser %>
           <h2><%=link_to 'read more', refinery.blog_post_path(post)%><h2>
         </section>

@@ -59,3 +59,36 @@
     margin:
       left                  : 25%
 
+#callto_action
+  @include row($m, $g)
+  background:
+    image             : url('3bar.png')
+    color             : $hard
+    repeat            : no-repeat
+    size              : 100% 17px
+    position          : left 77%
+  @media (min-width: $break)
+    @include row($ml, $gl)
+  h2
+    color                 : $soft
+    margin                : auto auto
+    text:
+      align               : center
+    background:
+      color               : $hard
+    @media (min-width: $iPad_p)
+      width               : 11em
+      float               : left
+      margin:
+        left              : 35%
+  a
+    @extend %button
+    display               : block
+    width                 : 10em
+    text:
+      align               : center
+    margin                : auto auto
+    @media (min-width: $iPad_p)
+      position            : absolute
+      bottom              : 1.0em
+      right               : 0

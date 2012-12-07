@@ -37,57 +37,102 @@
       margin:
         top                 : 0.333333em
         bottom              : 0.333333em
-  input
-    background:
-      color                 : $soft
-    border                  : $grey 1px solid
-    width                   : 100%
+  #privacy_link
+    display                 : block
+    width                   : 10em
+    text:
+      align                 : center
+    margin                  : auto auto
+
+#comments
+  @include col(1, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(1, 1, $ml, $gl)
+  .info
+    @include col(1, 1, 0, 0)
     margin:
-      top                   : 0.333333em
-      bottom                : 0.333333em
-    &:focus
-      -webkit-box-shadow    : 0 0 0.5rem $blue
-      -moz-box-shadow       : 0 0 0.5rem $blue
-      box-shadow            : 0 0 0.5rem $blue
-    font:
-      family                : 'Titillium Web', sans-serif
-      size                  : 13px
-      size                  : 1.3rem
-      weight                : 300
-    color                   : $grey
-  textarea
-    background:
-      color                 : $soft
-    border                  : $grey 1px solid
-    width                   : 100%
-    font:
-      family                : 'Titillium Web', sans-serif
-      size                  : 13px
-      size                  : 1.3rem
-      weight                : 300
-    color                   : $grey
-    padding:
-      top                   : 0.2em
-      bottom                : 0.2em
-    margin:
-      top                   : 0.1em
-      bottom                : 0.333333em
-    &:focus
-      -webkit-box-shadow    : 0 0 0.5rem $blue
-      -moz-box-shadow       : 0 0 0.5rem $blue
-      box-shadow            : 0 0 0.5rem $blue
-  .actions
-    @include col(1, 1, $m, $g)
+      top                   : 0
+      bottom                : 0
+    @media (min-width: $tablet_thin)
+      @include col(2, 1, 0, 0)
+      margin:
+        top                 : 0
+        bottom              : 0
+      padding:
+        right               : 1.0em
     @media (min-width: $break)
-      @include col(1, 1, $ml, $gl)
-    input
-      @extend %button
-      display               : block
-      width                 : 10em
-      margin                : auto auto
-    #privacy_link
-      display               : block
-      width                 : 10em
-      text:
-        align               : center
-      margin                : auto auto
+      @include col(2, 1, 0, 0)
+      margin:
+        top                 : 0
+        bottom              : 0
+      padding:
+        right               : 1.0em
+  .message_field
+    @include col(1, 1, 0, 0)
+    margin:
+      top                   : 0
+      bottom                : 0
+    @media (min-width: $tablet_thin)
+      @include col(2, 1, 0, 0)
+      margin:
+        top                 : 0
+        bottom              : 0
+      padding:
+        left                : 1.0em
+    @media (min-width: $break)
+      @include col(2, 1, 0, 0)
+      margin:
+        top                 : 0
+        bottom              : 0
+      padding:
+        left                : 1.0em
+
+input
+  background:
+    color                 : $soft
+  border                  : $grey 1px solid
+  width                   : 100%
+  margin:
+    top                   : 0.5em
+    bottom                : 0.5em
+  &:focus
+    -webkit-box-shadow    : 0 0 0.5rem $blue
+    -moz-box-shadow       : 0 0 0.5rem $blue
+    box-shadow            : 0 0 0.5rem $blue
+  font:
+    family                : 'Titillium Web', sans-serif
+    size                  : 13px
+    size                  : 1.3rem
+    weight                : 300
+  color                   : $grey
+textarea
+  background:
+    color                 : $soft
+  border                  : $grey 1px solid
+  width                   : 100%
+  font:
+    family                : 'Titillium Web', sans-serif
+    size                  : 13px
+    size                  : 1.3rem
+    weight                : 300
+  color                   : $grey
+  padding:
+    top                   : 0.2em
+    bottom                : 0.2em
+  margin:
+    top                   : 0.45em
+    bottom                : 0
+  &:focus
+    -webkit-box-shadow    : 0 0 0.5rem $blue
+    -moz-box-shadow       : 0 0 0.5rem $blue
+    box-shadow            : 0 0 0.5rem $blue
+.actions
+  @include col(1, 1, $m, $g)
+  @media (min-width: $break)
+    @include col(1, 1, $ml, $gl)
+  input
+    @extend %button
+    display               : block
+    width                 : 10em
+    margin                : auto auto
+

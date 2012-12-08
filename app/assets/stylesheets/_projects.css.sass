@@ -72,6 +72,9 @@
     height                : 180px
   @media (min-width: $tablet_thin)
     height                : 150px
+  @media (min-width: $iPad_p + 40px)
+    background:
+      position            : left 72%
   @media (min-width: $break)
     @include row($ml, $gl)
   .inner
@@ -91,7 +94,7 @@
       background:
         size              : 40% auto
         position          : 0% 80%
-    @media (min-width: $iPad_p)
+    @media (min-width: $iPad_p + 40px)
       background:
         size              : auto 140px
   h2
@@ -119,10 +122,8 @@
         size              : 2.6rem
       margin:
         left              : 30%
-    @media (min-width: $iPad_p)
-      bottom              : 5px
-    @media (min-width: $break)
-      bottom              : 0
+    @media (min-width: $iPad_p + 40px)
+      bottom              : 25px
       font:
         size              : 30px
         size              : 3.0rem
@@ -144,3 +145,5 @@
     border:
       left                : $hard solid 0.5em
       right               : $hard solid 0.5em
+    @media (min-width: $iPad_p + 40px)
+      bottom              : 35px

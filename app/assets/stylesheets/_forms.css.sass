@@ -25,8 +25,8 @@
   .message_field
     @include col(1, 1, $m, $g)
     margin:
-      top                   : 0.333333em
-      bottom                : 0.333333em
+      top                   : 0.666666em
+      bottom                : 0.666666em
     @media (min-width: $tablet_thin)
       @include col(2, 1, $m, $g)
       margin:
@@ -37,6 +37,10 @@
       margin:
         top                 : 0.333333em
         bottom              : 0.333333em
+    textarea
+      padding:
+        top                 : 0
+        bottom              : 0
   #privacy_link
     display                 : block
     width                   : 10em
@@ -70,23 +74,25 @@
   .message_field
     @include col(1, 1, 0, 0)
     margin:
-      top                   : 0
-      bottom                : 0
+      top                   : 0.5em
+      bottom                : 0.5em
     @media (min-width: $tablet_thin)
       @include col(2, 1, 0, 0)
       margin:
-        top                 : 0
-        bottom              : 0
+        top                 : 0.5em
+        bottom              : 0.5em
       padding:
         left                : 1.0em
     @media (min-width: $break)
       @include col(2, 1, 0, 0)
       margin:
-        top                 : 0
-        bottom              : 0
+        top                 : 0.5em
+        bottom              : 0.5em
       padding:
         left                : 1.0em
-
+    textarea
+      padding:
+        top                 : 0.2em
 input
   background:
     color                 : $soft
@@ -116,12 +122,6 @@ textarea
     size                  : 1.3rem
     weight                : 300
   color                   : $grey
-  padding:
-    top                   : 0.2em
-    bottom                : 0.2em
-  margin:
-    top                   : 0.45em
-    bottom                : 0
   &:focus
     -webkit-box-shadow    : 0 0 0.5rem $blue
     -moz-box-shadow       : 0 0 0.5rem $blue

@@ -83,21 +83,46 @@
 #blog_posts
   @include col(1, 1, 0, 0)
   .author
-    @include col(7, 1, 0, 0)
+    display               : none
     @extend %soft
-    text:
-      align               : center
-    time
-      color               : $grey
-    p
-      color               : $blue
-      border:
-        top               : white 1px solid
-        top               : white 0.1rem solid
+    @media (min-width: $iPad_p)
+      @include col(7, 1, 0, 0)
+      display               : block
+      text:
+        align               : center
+      time
+        color               : $grey
+        font:
+          size              : 15px
+          size              : 1.5rem
+        @media (min-width: 1195px)
+          font:
+            size            : 20px
+            size            : 2.0rem
+        @media (min-width: 1590px)
+          font:
+            size            : 25px
+            size            : 2.5rem
+      p
+        color               : $blue
+        border:
+          top               : white 1px solid
+          top               : white 0.1rem solid
   .blog_content
-    @include col(7, 6, 0, 0)
-    padding:
-      left                : 5%
+    @include col(1, 1, 0, 0)
+    @media (min-width: $iPad_p)
+      @include col(7, 6, 0, 0)
+      padding:
+        left                : 5%
+    footer
+      .filed_in
+        @include col(2, 1, 0, 0)
+      .tagged
+        @include col(2, 1, 0, 0)
+      p
+        @include col(1, 1, 0, 0)
+        a
+          color             : $blue
 
 #comments
   img

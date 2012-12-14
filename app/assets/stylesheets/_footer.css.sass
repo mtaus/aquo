@@ -1,8 +1,11 @@
-@import "grid"
-@import "colors"
-@import "backgrounds"
-@import "typography"
-@import "margins"
+footer
+  margin:
+    top               : 30px
+    top               : 3.0rem
+  @media (min-width: $break)
+    margin:
+      top             : 50px
+      top             : 5.0rem
 
 #bottom_nav
   @include row($m, $g)

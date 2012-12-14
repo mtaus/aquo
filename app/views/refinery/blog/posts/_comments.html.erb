@@ -1,40 +1,14 @@
-<aside id="comments">
-  <h2><%= t('title', :scope => 'refinery.blog.posts.show.comments') %></h2>
-  <% if (comments = @post.comments.approved).any? %>
-    <%= render :partial => "comment", :collection => comments %>
-  <% else %>
-    <p>
-      <%= t('none', :scope => 'refinery.blog.shared.comments') %>.
-    </p>
-  <% end %>
+<div id='comments'>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_identifier = "<%= refinery.blog_post_path(@post) %>";
+  <%= "var disqus_developer = 1;" if local_request? %>
 
-  <% flash.each do |key, value| %>
-    <div id='flash' class="flash flash_<%= key %>">
-      <%= value %>
-    </div>
-  <% end %>
-
-  <h2><%= t('add', :scope => 'refinery.blog.posts.show.comments') %></h2>
-  <%= form_for [refinery, :blog, @comment] do |f| %>
-    <%= render :partial => "/refinery/admin/error_messages",
-               :locals => {
-                 :object => f.object,
-                 :include_object_name => true
-               } %>
-    <div class='field'>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </div>
-    <div class='field'>
-      <%= f.label :email %>
-      <%= f.email_field :email %>
-    </div>
-    <div class='field message_field'>
-      <%= f.label :message %>
-      <%= f.text_area :message, :rows => 6 %>
-    </div>
-    <div class='field form-actions'>
-      <%= f.submit t('submit', :scope => 'refinery.blog.posts.show') %>
-    </div>
-  <% end %>
-</aside>
+  (function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://mysite.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=mysite">comments powered by Disqus.</a></noscript>
+</div>

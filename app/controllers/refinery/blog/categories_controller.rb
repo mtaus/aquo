@@ -1,6 +1,7 @@
 module Refinery
   module Blog
     class CategoriesController < BlogController
+      before_filter :find_tags
 
       def show
         @category = Refinery::Blog::Category.find(params[:id])

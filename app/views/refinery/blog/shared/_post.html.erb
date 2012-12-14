@@ -35,5 +35,22 @@
         </p>
       </footer>
     </section>
+    <footer>
+       <% if (categories = post.categories).any? %>
+          <aside class='filed_in'>
+            <p>Posted In:
+            <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %></p>
+          </aside>
+        <% end %>
+        <% if (tags = post.tags).any? %>
+          <aside class='tagged'>
+            <p><%= t('tagged', :scope => 'refinery.blog.posts.show') %>:
+            <%=raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence %></p>
+          </aside>
+        <% end %>
+      <p>
+        <%= link_to 'leave a comment', refinery.blog_post_path(post) + "#comments" if blog_post_teaser_enabled? %>
+      </p>
+    </footer>
   </article>
 <% end %>

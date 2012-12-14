@@ -71,12 +71,18 @@
   @media (min-width: $iPhone_l)
     height                : 180px
   @media (min-width: $tablet_thin)
-    height                : 150px
+    height                : 180px
+    background:
+      position            : left 74%
   @media (min-width: $iPad_p + 40px)
     background:
-      position            : left 72%
+      position            : left 65%
   @media (min-width: $break)
     @include row($ml, $gl)
+  @media (min-width: 1200px)
+    background:
+      size                : 100% 25px
+      position            : left 65%
   .inner
     background:
       image               : url('call_to_action.png')
@@ -92,9 +98,10 @@
     @media (min-width: $tablet_thin)
       height              : 150px
       background:
-        size              : 40% auto
-        position          : 0% 80%
+        size              : auto 114px
+        position          : 0% 100%
     @media (min-width: $iPad_p + 40px)
+      height              : 160px
       background:
         size              : auto 140px
   h2
@@ -147,3 +154,13 @@
       right               : $hard solid 0.5em
     @media (min-width: $iPad_p + 40px)
       bottom              : 35px
+    @media (min-width: 1200px)
+      font:
+        size              : 16px
+        size              : 1.6rem
+      bottom              : 32px
+    @media (min-width: 1200px)
+      font:
+        size              : 20px
+        size              : 2.0rem
+      bottom              : 30px

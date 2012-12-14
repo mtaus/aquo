@@ -17,8 +17,8 @@
     <% @posts.each do |post| %>
         <section id="post">
           <h2><%=link_to post.title, refinery.blog_post_path(post)%></h2>
-          <%=raw post.custom_teaser %>
-          <h2><%=link_to 'read more', refinery.blog_post_path(post)%><h2>
+          <% tease = post.custom_teaser[0...post.custom_teaser.size-4]%>
+          <%= (tease + "<span>#{link_to 'read more', refinery.blog_post_path(post)}</span></p>").html_safe %>
         </section>
     <% end %>
   </section>

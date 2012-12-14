@@ -1,3 +1,6 @@
+<% if request.fullpath.include?('/about') %>
+  <%= render :partial => "/refinery/inquiries/inquiries/form", :locals => {:inquiry => @inquiry} %>
+<% end %>
 <nav id = 'bottom_nav'>
   <div class = 'inner'>
     <div class = 'logo2'>

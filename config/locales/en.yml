@@ -10,3 +10,6 @@ en:
   company: "Your Company"
   phone:  "Your Phone/Mobile"
   message: "Your Comment"
+  will_paginate:
+    previous_label: "Previous"
+    next_label: "Next"

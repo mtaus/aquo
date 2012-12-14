@@ -1,11 +1,10 @@
 <% content_for :body_content_left do %>
+  <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
 
   <% if @posts.any? %>
     <section id="blog_posts">
-      <% @posts.each do |post| %>
-      <%= render 'post', :post => post %>
-      <% end %>
-      <%= will_paginate @posts %>
+     <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+      <%= will_paginate @posts, :page_links => false  %>
     </section>
   <% else %>
     <p><%= t('.no_blog_articles_yet') %></p>

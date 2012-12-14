@@ -149,6 +149,39 @@
         a
           color             : $blue
 
+.pagination
+  span.disabled
+    @extend %button_disabled
+    font:
+      family                : 'Titillium Web', sans-serif
+      weight                : 400
+      size                  : 15px
+      size                  : 1.5rem
+    @media (min-width: $tablet_thin)
+      font:
+        size                : 20px
+        size                : 2.0rem
+    margin:
+      top                   : 2em
+    width                   : 6em
+  a.next_page, a.previous_page
+    @extend %button
+    font:
+      family                : 'Titillium Web', sans-serif
+      weight                : 400
+      size                  : 15px
+      size                  : 1.5rem
+    @media (min-width: $tablet_thin)
+      font:
+        size                : 20px
+        size                : 2.0rem
+    margin:
+      top                   : 2em
+    width                   : 6em
+  .previous_page
+    float                   : left
+  .next_page
+    float                   : right
 #comments
   img
     color                 : $blue

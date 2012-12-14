@@ -69,6 +69,22 @@
       h2
         background:
           position        : 4.0em 50%
+    .recent_details
+      @include row(0, 0)
+      time
+        @include col(4, 1, 0, 0)
+      h3
+        @include col(4, 3, 0, 0)
+        font:
+          size            : 10px
+          size            : 1.0rem
+        @media (min-width: $tablet_thin)
+          font:
+            size          : 15px
+            size          : 1.5rem
+        color             : $blue
+        a
+          color           : $blue
 
 #show_blog_post
   @include col(1, 1, $m, $g)

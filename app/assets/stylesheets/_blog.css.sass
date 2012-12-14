@@ -101,36 +101,41 @@
     @extend %soft
     @media (min-width: $iPad_p)
       @include col(7, 1, 0, 0)
-      display               : block
+      display             : block
       margin:
-        top                 : 10px
-        top                 : 1.0rem
+        top               : 10px
+        top               : 1.0rem
       text:
-        align               : center
+        align             : center
       time
-        color               : $grey
+        color             : $grey
         font:
-          size              : 15px
-          size              : 1.5rem
+          size            : 15px
+          size            : 1.5rem
         @media (min-width: 1195px)
           font:
-            size            : 20px
-            size            : 2.0rem
+            size          : 20px
+            size          : 2.0rem
         @media (min-width: 1590px)
           font:
-            size            : 25px
-            size            : 2.5rem
+            size          : 25px
+            size          : 2.5rem
       p
-        color               : $blue
+        color             : $blue
         border:
-          top               : white 1px solid
-          top               : white 0.1rem solid
+          top             : white 1px solid
+          top             : white 0.1rem solid
   .blog_content
     @include col(1, 1, 0, 0)
+    padding:
+      bottom              : 20px
+      bottom              : 2.0rem
     @media (min-width: $iPad_p)
       @include col(7, 6, 0, 0)
       padding:
-        left                : 5%
+        left              : 5%
+        bottom            : 40px
+        bottom            : 4.0rem
     header
       a
         color               : $blue

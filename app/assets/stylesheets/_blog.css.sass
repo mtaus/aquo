@@ -69,6 +69,22 @@
       h2
         background:
           position        : 4.0em 50%
+    .recent_details
+      @include row(0, 0)
+      time
+        @include col(4, 1, 0, 0)
+      h3
+        @include col(4, 3, 0, 0)
+        font:
+          size            : 10px
+          size            : 1.0rem
+        @media (min-width: $tablet_thin)
+          font:
+            size          : 15px
+            size          : 1.5rem
+        color             : $blue
+        a
+          color           : $blue
 
 #show_blog_post
   @include col(1, 1, $m, $g)
@@ -88,6 +104,9 @@
     @media (min-width: $iPad_p)
       @include col(7, 1, 0, 0)
       display               : block
+      margin:
+        top                 : 10px
+        top                 : 1.0rem
       text:
         align               : center
       time
@@ -114,6 +133,9 @@
       @include col(7, 6, 0, 0)
       padding:
         left                : 5%
+    header
+      a
+        color               : $blue
     footer
       .filed_in
         @include col(2, 1, 0, 0)

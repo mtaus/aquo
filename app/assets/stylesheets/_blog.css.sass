@@ -89,17 +89,12 @@
         a
           color           : $blue
 
-#show_blog_post
-  @include col(1, 1, $m, $g)
-  @media (min-width: $break)
-    @include col(1, 1, $ml, $gl)
-
 #comments
   @include col(1, 1, $m, $g)
   @media (min-width: $break)
     @include col(1, 1, $ml, $gl)
 
-#blog_posts
+#blog_posts, #show_blog_post
   @include col(1, 1, 0, 0)
   .author
     display               : none

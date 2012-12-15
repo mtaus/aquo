@@ -1,16 +1,13 @@
-footer
+#bottom_nav
+  @include row($m, $g)
   margin:
     top               : 30px
     top               : 3.0rem
   @media (min-width: $break)
+    @include row($ml, $gl)
     margin:
       top             : 50px
       top             : 5.0rem
-
-#bottom_nav
-  @include row($m, $g)
-  @media (min-width: $break)
-    @include row($ml, $gl)
   .inner
     border:
       bottom          : solid $soft 1px

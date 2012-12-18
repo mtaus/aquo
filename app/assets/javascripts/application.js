@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require respond
+//= require ie9
 //= require_tree .

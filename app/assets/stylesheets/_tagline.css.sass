@@ -18,10 +18,14 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
 #tagline
   @include row($m, $g)
   height          : 250px
+  *height         : 600px
   background: 
     image         : url("buildings.png"), url('1bar.png'), url('1bar.png'), url("background_invert.png")
+    image         : url(buildings_ie.png)\9
     repeat        : no-repeat, no-repeat, no-repeat, repeat
+    repeat        : no-repeat\9
     position      : bottom center, 5% 35%, 97% 35%, top left
+    position      : bottom center\9
     size          : 100% 68%, 10% 5px, 10% 5px, auto auto
   @media (min-width: $break1)
     height        : 380px
@@ -30,6 +34,7 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
     $w            : (100% - (2 * $m) - $g) / 2
     background:
       position    : (($m + $g + $w)/(1 - $w / 100%)) 50%, 11% 5%, 97% 5%, top left
+      position    : (($m + $g + $w)/(1 - $w / 100%)) center\9
       size        : $w 100%, 55% 5px, 5% 5px, auto auto
   @media (min-width: $break)
     @include row($ml, $gl)
@@ -39,13 +44,13 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
       size        : $w 100%, 45% 5px, 3% 5px, auto auto
   h1
     @include col(1, 1, $m, $g)
-    color: rgba($blue, 0)
+    color: rgba($blue, 0.8)
     text-shadow: 0 0 1px rgba(lighten($blue, 10%), 0.5), 0 0 0 rgba(darken($blue, 10%), 0.9)
     font:
       size          : 25px
       size          : 2.5rem
     line:
-      height        : 0.9em
+      height        : 0.9
     text:
       transform     : uppercase
       align         : center
@@ -74,7 +79,6 @@ $breakH : 945px //min-size trigger for 2nd layout change to match header
       width         : 5em
       margin:
         left        : 0
-      position      : relative
       text:
         align       : left
       font:

@@ -31,15 +31,14 @@
 .logo
   @include col(1, 1, $m, $g)
   background: 
-    image             : url("logo.png")
+    image             : url(logo.png)
+    image             : url(logo_ie.png)\9
     repeat            : no-repeat
     position          : top center
     size              : 85px auto
   @media (min-width: $break)
     @include col(5, 1, $ml, $gl)
     background:
-      image             : url("logo.png")
-      repeat            : no-repeat
       position          : top left
       size              : 110px auto
 
@@ -111,9 +110,11 @@
       text:
         indent          : -9999px
       background:
-        image           : url('social_sprite.png')
+        image           : url(social_sprite.png)
+        image           : url(social_sprite_ie.png)\9
         size            : 2.5em auto
-        position        : right -4.9em //change right to 50% 
+        position        : right -4.9em //change right to 50%
+        position        : right -5.6em\9
         repeat          : no-repeat
       &:hover
         border          : none
@@ -121,6 +122,7 @@
           bottom        : 0.3em
         background:
           position      : right -7.4em
+          position      : right -8.4em\9
     // .facebook
     //   @include col(12, 1, 0, 0)
     //   display           : inline

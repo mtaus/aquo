@@ -7,19 +7,24 @@
                } %>
     <div class="info">
       <div class="field">
+        <%= f.required_label :name, :class => 'ie_label' %>
         <%= f.text_field :name, :class => 'text', :required => 'required', :placeholder => ' Your Name*' %>
       </div>
       <div class="field">
+        <%= f.required_label :email, :class => 'ie_label' %>
         <%= f.email_field :email, :class => 'text email', :required => 'required', :placeholder => ' Your E-Mail Address*' %>
       </div>
       <div class="field">
+        <%= f.required_label :phone, :class => 'ie_label' %>
         <%= f.text_field :phone, :class => 'text phone', :placeholder => ' Your Phone/Mobile*' %>
       </div>
       <div class="field">
+        <%= f.required_label :company, :class => 'ie_label' %>
         <%= f.text_field :company, :class => 'text', :required => 'required',  :placeholder => ' Your Company*' %>
       </div>
     </div>
     <div class='field message_field'>
+      <%= f.required_label :message, :class => 'ie_label' %>
       <%= f.text_area :message, :rows => 6, :required => 'required', :placeholder => ' Message*' %>
     </div>
     <div class="actions">
